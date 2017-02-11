@@ -4,9 +4,9 @@
   <subtitle>the simple, the best</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://labs.ene.im/"/>
+  <link href="https://eneim.github.io/"/>
   <updated>2017-02-11T16:01:55.000Z</updated>
-  <id>https://labs.ene.im/</id>
+  <id>https://eneim.github.io/</id>
   
   <author>
     <name>Nam Nguyen</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Bye bye CI</title>
-    <link href="https://labs.ene.im/2017/02/12/Bye-bye-CI/"/>
-    <id>https://labs.ene.im/2017/02/12/Bye-bye-CI/</id>
+    <link href="https://eneim.github.io/2017/02/12/Bye-bye-CI/"/>
+    <id>https://eneim.github.io/2017/02/12/Bye-bye-CI/</id>
     <published>2017-02-11T15:57:52.000Z</published>
     <updated>2017-02-11T16:01:55.000Z</updated>
     
@@ -45,14 +45,14 @@
     </summary>
     
     
-      <category term="dev, CI" scheme="https://labs.ene.im/tags/dev-CI/"/>
+      <category term="dev, CI" scheme="https://eneim.github.io/tags/dev-CI/"/>
     
   </entry>
   
   <entry>
     <title>Migrate to wercker</title>
-    <link href="https://labs.ene.im/2017/02/11/Migrate-to-wercker/"/>
-    <id>https://labs.ene.im/2017/02/11/Migrate-to-wercker/</id>
+    <link href="https://eneim.github.io/2017/02/11/Migrate-to-wercker/"/>
+    <id>https://eneim.github.io/2017/02/11/Migrate-to-wercker/</id>
     <published>2017-02-11T04:12:13.000Z</published>
     <updated>2017-02-11T04:19:37.000Z</updated>
     
@@ -70,14 +70,14 @@
     </summary>
     
     
-      <category term="dev, CI, Migrate" scheme="https://labs.ene.im/tags/dev-CI-Migrate/"/>
+      <category term="dev, CI, Migrate" scheme="https://eneim.github.io/tags/dev-CI-Migrate/"/>
     
   </entry>
   
   <entry>
     <title>Auto deploy from Travis CI</title>
-    <link href="https://labs.ene.im/2016/08/07/Deploy-from-travis/"/>
-    <id>https://labs.ene.im/2016/08/07/Deploy-from-travis/</id>
+    <link href="https://eneim.github.io/2016/08/07/Deploy-from-travis/"/>
+    <id>https://eneim.github.io/2016/08/07/Deploy-from-travis/</id>
     <published>2016-08-07T11:42:46.000Z</published>
     <updated>2017-02-11T04:19:37.000Z</updated>
     
@@ -98,22 +98,22 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://labs.ene.im/tags/Blog/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
     
-      <category term="EN" scheme="https://labs.ene.im/tags/EN/"/>
+      <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
     
-      <category term="Dev" scheme="https://labs.ene.im/tags/Dev/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
     
-      <category term="CI" scheme="https://labs.ene.im/tags/CI/"/>
+      <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
     
-      <category term="Travis" scheme="https://labs.ene.im/tags/Travis/"/>
+      <category term="Travis" scheme="https://eneim.github.io/tags/Travis/"/>
     
   </entry>
   
   <entry>
     <title>To the Multi lang blog - English, 日本語, Tiếng Việt</title>
-    <link href="https://labs.ene.im/2016/08/07/To-the-Multilang/"/>
-    <id>https://labs.ene.im/2016/08/07/To-the-Multilang/</id>
+    <link href="https://eneim.github.io/2016/08/07/To-the-Multilang/"/>
+    <id>https://eneim.github.io/2016/08/07/To-the-Multilang/</id>
     <published>2016-08-07T01:16:07.000Z</published>
     <updated>2017-02-11T04:19:37.000Z</updated>
     
@@ -143,20 +143,20 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://labs.ene.im/tags/Blog/"/>
+      <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
     
-      <category term="EN" scheme="https://labs.ene.im/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
     
-      <category term="JP" scheme="https://labs.ene.im/tags/JP/"/>
+      <category term="JP" scheme="https://eneim.github.io/tags/JP/"/>
     
-      <category term="VI" scheme="https://labs.ene.im/tags/VI/"/>
+      <category term="VI" scheme="https://eneim.github.io/tags/VI/"/>
     
   </entry>
   
   <entry>
     <title>A New Challenge</title>
-    <link href="https://labs.ene.im/2016/08/06/new-challenge/"/>
-    <id>https://labs.ene.im/2016/08/06/new-challenge/</id>
+    <link href="https://eneim.github.io/2016/08/06/new-challenge/"/>
+    <id>https://eneim.github.io/2016/08/06/new-challenge/</id>
     <published>2016-08-05T16:44:24.000Z</published>
     <updated>2017-02-11T04:19:37.000Z</updated>
     
@@ -174,9 +174,9 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://labs.ene.im/tags/Blog/"/>
+      <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
     
-      <category term="EN" scheme="https://labs.ene.im/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
     
   </entry>
   
