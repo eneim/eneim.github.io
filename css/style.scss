@@ -442,6 +442,7 @@ a:hover, a:active {
 #disqus_thread {
   margin: 30px;
   border-bottom: 1px solid #f2f2f2;
+  max-width: 800px;
 }
 
 .footer {
@@ -755,7 +756,7 @@ a.btn {
     }
   }
   .post {
-    max-width: 960px;
+    max-width: 100%;
   }
   .page-top {
     width: 100%
@@ -775,5 +776,9 @@ a.btn {
   .share {
     display: grid;
   }
-
+  #disqus_thread {
+    margin: 30px;
+    border-bottom: 1px solid #f2f2f2;
+    max-width: 100%;
+  }
 }
