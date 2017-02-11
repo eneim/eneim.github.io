@@ -172,6 +172,7 @@ a:hover, a:active {
 
 .sidebar {
   width: 25%;
+  min-width: 360px;
   -webkit-background-size: cover;
   background-size: cover;
   background-color: #fff;
@@ -229,9 +230,15 @@ a:hover, a:active {
   color: #4786D6;
 }
 
+.post-page {
+  width: 100%;
+  max-width: 960px;
+}
+
 .post {
   background-color: #FFF;
   margin: 30px;
+  max-width: 800px;
 }
 .post .post-title h1 {
   text-transform: uppercase;
@@ -668,6 +675,10 @@ a.btn {
   }
   .sidebar .logo-title .title h3 {
     font-size: 20px;
+  }
+
+  .post {
+    max-width: 960px;
   }
 
   .page-top {

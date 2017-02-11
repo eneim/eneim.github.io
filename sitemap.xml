@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://labs.ene.im/2016/08/07/To-the-Multilang/</loc>
+    <loc>https://labs.ene.im/2016/08/07/Deploy-from-travis/</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://labs.ene.im/2016/08/07/Deploy-from-travis/</loc>
+    <loc>https://labs.ene.im/2017/02/11/Migrate-to-wercker/</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://labs.ene.im/2017/02/11/Migrate-to-wercker/</loc>
+    <loc>https://labs.ene.im/2016/08/07/To-the-Multilang/</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
