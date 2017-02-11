@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://labs.ene.im/2016/08/07/Deploy-from-travis/</loc>
+    <loc>https://labs.ene.im/2016/08/07/To-the-Multilang/</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://labs.ene.im/2016/08/07/To-the-Multilang/</loc>
+    <loc>https://labs.ene.im/2016/08/07/Deploy-from-travis/</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
@@ -37,6 +37,13 @@
   </url>
   
   <url>
+    <loc>https://labs.ene.im/about/index.html</loc>
+    
+    <lastmod>2017-02-11T04:19:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://labs.ene.im/archives/index.html</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
@@ -45,13 +52,6 @@
   
   <url>
     <loc>https://labs.ene.im/tags/index.html</loc>
-    
-    <lastmod>2017-02-11T04:19:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://labs.ene.im/about/index.html</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
