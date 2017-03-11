@@ -114,6 +114,15 @@
         </li>
       </a>
     
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
   </ul>
 </nav>
 
@@ -140,6 +149,15 @@
             
             
               Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              About
             
           </a>
         </li>
@@ -187,20 +205,14 @@
       
         
         
+          
+        
 
         
-          <h1 id="Why"><a href="#Why" class="headerlink" title="Why ?"></a>Why ?</h1><p><strong>TL,DR</strong>:</p>
-<blockquote>
-<p>Why CI?</p>
-</blockquote>
-<p>Publishing made easy.</p>
-<blockquote>
-<p>Why <strong><em>not</em></strong> CI?</p>
-</blockquote>
-<p>CI setting is complicated.</p>
-<h1 id="Long-story-short"><a href="#Long-story-short" class="headerlink" title="Long story short"></a>Long story short</h1><p>I have been struggling setting up my new Wercker CI (to support private repo) for a day. It fails with some un-expected behaviour I could not explain. The same setup works well for local … I suspect the docker image CI is running in doesn’t perfectly support hexo. So I stop using CI, just manually type the deploy script on every new post.</p>
-<p>  That’s it.</p>
-
+          <p>I have been struggling setting up my new Wercker CI (to support private repo) ...</p>
+          <div class="read-more">
+            <a href="/2017/02/12/Bye-bye-CI/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
@@ -234,14 +246,14 @@
       
         
         
+          
+        
 
         
-          <h1 id="Prefect"><a href="#Prefect" class="headerlink" title="Prefect"></a>Prefect</h1><p>So it has been a while I have no activity on my blog. It is of course a predictable behaviour. These days, I still am wandering around, with not much to think about.</p>
-<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>Lately, there are some changes in either my private life as well as my professional activities. I would like to make my writing better, but still try to keep it staying underground before it is the time to publish it.</p>
-<p>So I decide to move from travis to something allows me to use private github repo. And here wercker comes.</p>
-<h1 id="What-I-did"><a href="#What-I-did" class="headerlink" title="What I did?"></a>What I did?</h1><p>Create a new private repo, copy-paste my old blog repo into this new one, re-write CI script (see werkcer.yml for more information). Finally I write this post and then push it to master.</p>
-<h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><p>Let’s see if this post can be successfully deployed …</p>
-
+          <p>Lately, there are some changes in either my private life as well as my professional activities. I would like to make my writing better, but still try to keep it staying underground before it is the time to publish it. So I decide to move from travis to something allows me to use private github repo. And here wercker comes.</p>
+          <div class="read-more">
+            <a href="/2017/02/11/Migrate-to-wercker/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
@@ -275,17 +287,14 @@
       
         
         
+          
+        
 
         
-          <p><strong>TL,DR:</strong> I added my blog to Travis CI so every time I push something new to <em>master branch</em> of my blog repo, it will automatically generate and deploy my blog.</p>
-<h2 id="Why-CI-Why"><a href="#Why-CI-Why" class="headerlink" title="Why CI, Why?"></a>Why CI, Why?</h2><blockquote>
-<p><strong><em>Why not?</em></strong></p>
-</blockquote>
-<p>Well, this morning when I was in the train going far away from home (to the next station, actually), I would like to post something fun to my new blog. But hey, I don’t have my PC connected to the Internet, and if I really want to, I need to tether from my iPhone, which is not something cool. So I thought of how about something that help me to deploy the post after I push it to the repo. So that I can simply post new stuff just from my iPhone.</p>
-<p>Well (again), it turns out to be easily done by setting up a CI (Continuous Integration) server, where <strong>Travis CI</strong> is one of the most famous. And most important, when I tried a <em>Google search</em> about it, <a href="https://sazzer.github.io/blog/2015/05/04/Deploying-Hexo-to-Github-Pages-with-Travis/" target="_blank" rel="external">this tutorial</a> comes to (almost) top. So here I have my blog setup, and after I push this post to the air, I don’t have to run the boring <code>hexo deploy</code> command again.</p>
-<p>Just that. Have fun blogging folks.</p>
-<p><em>P/S</em>: This post is actually created to test the CI.</p>
-
+          <p>I added my blog to Travis CI so every time I push something new to *master branch* of my blog repo, it will automatically generate and deploy my blog.</p>
+          <div class="read-more">
+            <a href="/2016/08/07/Deploy-from-travis/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
@@ -319,26 +328,14 @@
       
         
         
+          
+        
 
         
-          <h2 id="A-multi-languages-blog"><a href="#A-multi-languages-blog" class="headerlink" title="A multi languages blog"></a>A multi languages blog</h2><p>As a foreigner engineer living in Japan, working with multi-platform services and open projects with other engineers all over the World, supporting multi languages is a must-have feature I would like to add to my blog.</p>
-<p>The setup is just simple: one line of CSS, some tune-up in font family styling and you are <del>done</del> almost there.</p>
-<p>There is one single issue which I encounter many time: does the new typeface look good everywhere, for my languages? Currently, I’m using English, Japanese and Vietnamese almost equally among them. So both of them should be nicely rendered.</p>
-<p>As a general mobile developer, I have no favorite font family. My very basic setup will be <strong>Roboto</strong> or <strong>Noto</strong>. This blog is current using something I haven’t test yet, but if it works fine, I will leave it there.</p>
-<p>Now there would be some non-English paragraph to test <del>foreign languages</del> some other languages.</p>
-<h2 id="A-Japanese-Lorem-Ipsum"><a href="#A-Japanese-Lorem-Ipsum" class="headerlink" title="A Japanese Lorem Ipsum"></a>A Japanese Lorem Ipsum</h2><p>用モニシ市社みねスけ鎖絵アラ費分マク由男4校タア系際ドルゆ料方結美るきラ想転治チマ期相ちイあ者亜ま。同タケ主共クう整3独べまい市画キフミ告稿チ表関ラ政89無ぞし募示ヱクサ権用ルざ十歌みト握68演せさ既新ぎ琶名ンょ問発監す。動信出リどえて定杯レモ当79打ドクる記組ク責明ドば側意ス位牟クヱマ条着レヱ能強な告陸済蘭注ツ線物のぽべた転催野川列ばな。</p>
-<p>無ルおねト照徳54玉うフ東質レイヤミ討告ゃン討一ヱフエソ番未チヱヌ帰物ム援宇すょレゆ認被ネヱ取展ぼど見行働迎彫慰て。投ぞじぶど州中とめ松広サシワ新十ゃリげゅ三属ヲタコ簡山ぞろゅ話満ぜる申望4帰ロナタ引受び込松正みすぽ松統お作祭ツ供担作フお検海詳暮点ろ。表外ヨ反辞タ城理さぐに替王ネ更増ユ業71界藤ッぽ年3軽内えス排視ヒトウ首村トホツ算禁在ざ制決次修級ぽゃぞも。</p>
-<p>午相カネムサ業向シウロク転予れづり問営ハエラモ代強ラ内分リづ囲必リオ博辞でっ品安変ケ気言えッたと本航レオセ転論ドえ増口コヒセ擬5表労ヒトアレ広画てねーひ連汚ッずつこ。報カ旅応ムハリ事消証ん官堅れくラ月車だゅまど以4分べおむ一在ひちゅい心辞クぜもぱ釜所ト響併室だわ力42千つづほへ日天ふフらり多68箱僕滞よさむて。</p>
-<h2 id="A-Vietnamese-Lorem-Ipsum"><a href="#A-Vietnamese-Lorem-Ipsum" class="headerlink" title="A Vietnamese Lorem Ipsum"></a>A Vietnamese Lorem Ipsum</h2><p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500, khi một họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành một bản mẫu văn bản. Đoạn văn bản này không những đã tồn tại năm thế kỉ, mà khi được áp dụng vào tin học văn phòng, nội dung của nó vẫn không hề bị thay đổi. Nó đã được phổ biến trong những năm 1960 nhờ việc bán những bản giấy Letraset in những đoạn Lorem Ipsum, và gần đây hơn, được sử dụng trong các ứng dụng dàn trang, như Aldus PageMaker.</p>
-<p>Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh cổ điển xuất hiện từ năm 45 trước Công Nguyên, nghĩa là nó đã có khoảng hơn 2000 tuổi. Một giáo sư của trường Hampden-Sydney College (bang Virginia - Mỹ) quan tâm tới một trong những từ la-tinh khó hiểu nhất, “consectetur”, trích từ một đoạn của Lorem Ipsum, và đã nghiên cứu tất cả các ứng dụng của từ này trong văn học cổ điển, để từ đó tìm ra nguồn gốc không thể chối cãi của Lorem Ipsum. Thật ra, nó được tìm thấy trong các đoạn 1.10.32 và 1.10.33 của “De Finibus Bonorum et Malorum” (Đỉnh tối thượng của Cái Tốt và Cái Xấu) viết bởi Cicero vào năm 45 trước Công Nguyên. Cuốn sách này là một luận thuyết đạo lí rất phổ biến trong thời kì Phục Hưng. Dòng đầu tiên của Lorem Ipsum, “Lorem ipsum dolor sit amet…” được trích từ một câu trong đoạn thứ 1.10.32.</p>
-<p>Trích đoạn chuẩn của Lorem Ipsum được sử dụng từ thế kỉ thứ 16 và được tái bản sau đó cho những người quan tâm đến nó. Đoạn 1.10.32 và 1.10.33 trong cuốn “De Finibus Bonorum et Malorum” của Cicero cũng được tái bản lại theo đúng cấu trúc gốc, kèm theo phiên bản tiếng Anh được dịch bởi H. Rackham vào năm 1914.</p>
-<h2 id="Last-but-not-least-Programming-languages"><a href="#Last-but-not-least-Programming-languages" class="headerlink" title="Last but not least: Programming languages"></a>Last but not least: Programming languages</h2><p>Talking to languages, with an engineer, there should not be forgotten about Programming languages. I would like to have beautiful code block for some of my most familiar Programming languages. Let’s try some.</p>
-<h4 id="1-Java"><a href="#1-Java" class="headerlink" title="1. Java"></a>1. Java</h4><figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">package</span> com.example.app;</div><div class="line"></div><div class="line"><span class="keyword">import</span> android.app.Application;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate();</div><div class="line">        AndroidThreeTen.init(<span class="keyword">this</span>); <span class="comment">// init the lib here</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="2-XML"><a href="#2-XML" class="headerlink" title="2. XML"></a>2. XML</h4><figure class="highlight xml"><table><tr><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Copyright 2016 Google Inc.</div><div class="line"></div><div class="line">  Licensed under the Apache License, Version 2.0 (the "License");</div><div class="line">  you may not use this file except in compliance with the License.</div><div class="line">  You may obtain a copy of the License at</div><div class="line"></div><div class="line">       http://www.apache.org/licenses/LICENSE-2.0</div><div class="line"></div><div class="line">  Unless required by applicable law or agreed to in writing, software</div><div class="line">  distributed under the License is distributed on an "AS IS" BASIS,</div><div class="line">  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</div><div class="line">  See the License for the specific language governing permissions and</div><div class="line">  limitations under the License.</div><div class="line">  --&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">vector</span></span></div><div class="line">    <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></div><div class="line">    <span class="attr">android:width</span>=<span class="string">"360dp"</span></div><div class="line">    <span class="attr">android:height</span>=<span class="string">"200dp"</span></div><div class="line">    <span class="attr">android:viewportWidth</span>=<span class="string">"360"</span></div><div class="line">    <span class="attr">android:viewportHeight</span>=<span class="string">"200"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">path</span></span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"hash"</span></div><div class="line">        <span class="attr">android:pathData</span>=<span class="string">"M39,45L39,80 M57,45L57,80 M66,54L31,54 M66,71L31,71"</span></div><div class="line">        <span class="attr">android:strokeColor</span>=<span class="string">"@color/indigo_400"</span></div><div class="line">        <span class="attr">android:strokeLineCap</span>=<span class="string">"round"</span></div><div class="line">        <span class="attr">android:strokeWidth</span>=<span class="string">"@dimen/hashtag_stroke_width"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">path</span></span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"i_body"</span></div><div class="line">        <span class="attr">android:pathData</span>=<span class="string">"M83,82L107,82A2,2 0,0 1,109 84L109,155A2,2 0,0 1,107 157L83,157A2,2 0,0 1,81 155L81,84A2,2 0,0 1,83 82z"</span></div><div class="line">        <span class="attr">android:strokeColor</span>=<span class="string">"@color/indigo_400"</span></div><div class="line">        <span class="attr">android:strokeWidth</span>=<span class="string">"@dimen/hashtag_stroke_width"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">path</span></span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"i_dot"</span></div><div class="line">        <span class="attr">android:pathData</span>=<span class="string">"M94,59m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0"</span></div><div class="line">        <span class="attr">android:strokeColor</span>=<span class="string">"@color/indigo_400"</span></div><div class="line">        <span class="attr">android:strokeWidth</span>=<span class="string">"@dimen/hashtag_stroke_width"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">path</span></span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"o"</span></div><div class="line">        <span class="attr">android:pathData</span>=<span class="string">"M159.5,119.5m-37.5,0a37.5,37.5 0,1 1,75 0a37.5,37.5 0,1 1,-75 0"</span></div><div class="line">        <span class="attr">android:strokeColor</span>=<span class="string">"@color/indigo_400"</span></div><div class="line">        <span class="attr">android:strokeWidth</span>=<span class="string">"@dimen/hashtag_stroke_width"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">vector</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="3-Javascript"><a href="#3-Javascript" class="headerlink" title="3. Javascript"></a>3. Javascript</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">var</span> app = express();</div><div class="line"></div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</div><div class="line">  res.send(<span class="string">'Hello World!'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Example app listening on port 3000!'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="4-Gist"><a href="#4-Gist" class="headerlink" title="4. Gist"></a>4. Gist</h4><script src="//gist.github.com/55df01e092520a6d33a4.js?file=BadgeTabLayout.java"></script>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Well, let’s be multi-lang.</p>
-
+          <p>As a foreigner engineer living in Japan, working with multi-platform services and open projects with other engineers all over the World, supporting multi languages is a must-have feature I would like to add to my blog.</p>
+          <div class="read-more">
+            <a href="/2016/08/07/To-the-Multilang/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
@@ -372,14 +369,14 @@
       
         
         
+          
+        
 
         
-          <h2 id="New-Challenge"><a href="#New-Challenge" class="headerlink" title="New Challenge"></a>New Challenge</h2><p>So it has been couple days since I moved on. I wanted to have/create my own tech/stuff blog for quite a long time, and in many times actually. But neither my schedule allowed me to do that, nor I myself had enough enthusiastic to do that.</p>
-<p>But then, I move on, and at the time I’m <del>writing</del> typing this post, I turned 27. I have never considered a single day to be more special than others, including my own birthday. But of course, it is still something that Facebook notifies me when the time comes. So I decide to make a TODO list.</p>
-<p>And the first item comes to my mind, is to have a <em>not-bad-done</em> blog, which should be a log catching my thought everyday and saving my process for times.</p>
-<p>So here it is, after all this time.</p>
-<p><strong>Hello World!</strong> one more time.</p>
-
+          <p>Hello World one more time.</p>
+          <div class="read-more">
+            <a href="/2016/08/06/new-challenge/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
@@ -416,21 +413,13 @@
     
       
         
-          <a href="/eneim" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+          <a href="http://stackoverflow.com/users/1553254/nguyễn-hoài-nam" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
         
       
     
       
         
-          <a href="/eneim" class="iconfont icon-twitter" title="twitter"></a>
-        
-      
-    
-      
-    
-      
-        
-          <a href="/eneim" class="iconfont icon-linkedin" title="linkedin"></a>
+          <a href="https://twitter.com/ene__im" class="iconfont icon-twitter" title="twitter"></a>
         
       
     
@@ -438,7 +427,15 @@
     
       
         
-          <a href="/eneim" class="iconfont icon-github" title="github"></a>
+          <a href="https://www.linkedin.com/in/eneim" class="iconfont icon-linkedin" title="linkedin"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/eneim" class="iconfont icon-github" title="github"></a>
         
       
     
@@ -467,7 +464,7 @@
     
     &copy; 
      
-      2015 - 
+      2016 - 
     
     2017
 
