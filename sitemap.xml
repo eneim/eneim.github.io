@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</loc>
+    
+    <lastmod>2017-05-12T08:34:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eneim.github.io/2017/02/11/Migrate-to-wercker/</loc>
     
     <lastmod>2017-05-12T07:01:37.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://eneim.github.io/2017/02/12/Bye-bye-CI/</loc>
     
     <lastmod>2017-05-12T07:01:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</loc>
-    
-    <lastmod>2017-05-12T07:01:22.000Z</lastmod>
     
   </url>
   

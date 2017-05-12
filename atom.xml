@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eneim.github.io/"/>
-  <updated>2017-05-12T07:01:22.000Z</updated>
+  <updated>2017-05-12T08:34:21.000Z</updated>
   <id>https://eneim.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/"/>
     <id>https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</id>
     <published>2017-04-26T23:24:42.000Z</published>
-    <updated>2017-05-12T07:01:22.000Z</updated>
+    <updated>2017-05-12T08:34:21.000Z</updated>
     
     <content type="html"><![CDATA[<p>I have been developed an Android library named <strong>Toro</strong>. TL;DR it is <a href="https://github.com/eneim/Toro" target="_blank" rel="external">here</a>.</p>
 <h1 id="About-Toro"><a href="#About-Toro" class="headerlink" title="About Toro"></a>About Toro</h1><p>Description about this library can be found in that github repo. But in short, Toro supports the behavior of Media Playlist on RecyclerView, including auto playback and state managing (pause/resume etc). The motivation behind this comes from Facebook timeline, Instagram, etc.</p>
@@ -41,9 +41,9 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
-    
       <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
     
       <category term="Android" scheme="https://eneim.github.io/tags/Android/"/>
     
@@ -80,9 +80,9 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
-    
       <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
     
       <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
     
@@ -109,9 +109,9 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
-    
       <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
     
       <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
     
@@ -143,11 +143,11 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
-    
       <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
     
       <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
     
       <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
     
