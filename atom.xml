@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eneim.github.io/"/>
-  <updated>2017-05-12T06:44:01.000Z</updated>
+  <updated>2017-05-12T06:47:44.000Z</updated>
   <id>https://eneim.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/"/>
     <id>https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</id>
     <published>2017-04-26T23:24:42.000Z</published>
-    <updated>2017-05-12T06:44:01.000Z</updated>
+    <updated>2017-05-12T06:47:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>I have been developed an Android library named <strong>Toro</strong>. TL;DR it is <a href="https://github.com/eneim/Toro" target="_blank" rel="external">here</a>.</p>
 <h1 id="About-Toro"><a href="#About-Toro" class="headerlink" title="About Toro"></a>About Toro</h1><p>Description about this library can be found in that github repo. But in short, Toro supports the behavior of Media Playlist on RecyclerView, including auto playback and state managing (pause/resume etc). The motivation behind this comes from Facebook timeline, Instagram, etc.</p>
@@ -56,7 +56,7 @@
     <link href="https://eneim.github.io/2017/02/12/Bye-bye-CI/"/>
     <id>https://eneim.github.io/2017/02/12/Bye-bye-CI/</id>
     <published>2017-02-11T15:57:52.000Z</published>
-    <updated>2017-03-11T16:04:25.000Z</updated>
+    <updated>2017-05-12T06:47:38.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Why"><a href="#Why" class="headerlink" title="Why ?"></a>Why ?</h1><p><strong>TL,DR</strong>:</p>
 <blockquote>
@@ -78,7 +78,9 @@
     </summary>
     
     
-      <category term="dev, CI" scheme="https://eneim.github.io/tags/dev-CI/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+    
+      <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
     
   </entry>
   
@@ -87,7 +89,7 @@
     <link href="https://eneim.github.io/2017/02/11/Migrate-to-wercker/"/>
     <id>https://eneim.github.io/2017/02/11/Migrate-to-wercker/</id>
     <published>2017-02-11T04:12:13.000Z</published>
-    <updated>2017-03-11T16:02:55.000Z</updated>
+    <updated>2017-05-12T06:47:51.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Prefect"><a href="#Prefect" class="headerlink" title="Prefect"></a>Prefect</h1><p>So it has been a while I have no activity on my blog. It is of course a predictable behaviour. These days, I still am wandering around, with not much to think about.</p>
 <h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>Lately, there are some changes in either my private life as well as my professional activities. I would like to make my writing better, but still try to keep it staying underground before it is the time to publish it.</p>
@@ -103,7 +105,11 @@
     </summary>
     
     
-      <category term="dev, CI, Migrate" scheme="https://eneim.github.io/tags/dev-CI-Migrate/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+    
+      <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
+    
+      <category term="Migrate" scheme="https://eneim.github.io/tags/Migrate/"/>
     
   </entry>
   
