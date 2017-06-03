@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="TL;DR Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...)."/>
+
+
+
+
+  <meta name="keywords" content="EN,Dev,Android,RecyclerView,Adapter,Beginner," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="eneim's log">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.2.x" />
+
+
+
+<link rel="canonical" href="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/"/>
+
+
+<meta name="description" content="TL;DR Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...).">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why you should call setAdapter(null)">
+<meta property="og:url" content="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/index.html">
+<meta property="og:site_name" content="eneim's log">
+<meta property="og:description" content="TL;DR Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...).">
+<meta property="og:image" content="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/activity-recreated.png">
+<meta property="og:image" content="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/destroy-do-nothing.png">
+<meta property="og:image" content="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/destroy-remove-adapter.png">
+<meta property="og:updated_time" content="2017-06-03T06:44:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Why you should call setAdapter(null)">
+<meta name="twitter:description" content="TL;DR Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...).">
+<meta name="twitter:image" content="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/activity-recreated.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.2.x" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-72567780-7', 'auto');
+        ga('send', 'pageview');
+  </script>
+
+
+
+    <title> Why you should call setAdapter(null) · eneim's log </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">eneim's log</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">eneim's log</a>
+  <p style="margin-top: -1.2em; margin-bottom: 0; margin-left: 1.5em;">the simple, the best</p>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input" />
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Why you should call setAdapter(null)
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jun 3, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Problem"><span class="toc-text">1. Problem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-The-Solution"><span class="toc-text">2. The Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-One-more-thing"><span class="toc-text">3. One more thing.</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p><strong>TL;DR</strong>: Always call <code>RecyclerView#setAdapter(null)</code> before your <code>RecyclerView</code> is going away (in <code>onDestroy/onDestroyView/...</code>).</p>
+<h1 id="1-Problem"><a href="#1-Problem" class="headerlink" title="1. Problem"></a>1. Problem</h1><p>In common tutorial of RecyclerView out there, you may see this quite frequently, inside an <code>Activity</code>‘s <code>onCreate</code> or either a <code>Fragment</code>‘s <code>onCreateView</code>.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><div class="line">mAdapter = <span class="keyword">new</span> MyCoolAdapter(); <span class="comment">// here mAdapter is a member of enclosing class.</span></div><div class="line">recyclerView.setAdapter(adapter);</div></pre></td></tr></table></figure>
+<p>It is pretty common step when one initialize his/her screen’s <code>RecyclerView</code>. But I rarely see people telling those “learners” what should them do on the “terminal” point. I mean, does anyone care about tearing down the RecyclerView after all?</p>
+<p>One may ask: what’s wrong with that? Is <code>Activity</code> destroying everything after it is destroyed?</p>
+<p>Well, for your curiosity: <strong>will it be destroyed</strong>?</p>
+<p>Let’s take a quick look at this question on StackOverflow: <a href="https://stackoverflow.com/questions/30132643/recyclerview-doesnt-unregister-itself-from-the-adapter-on-orientation-change" target="_blank" rel="external"><code>RecyclerView</code> doesn’t unregister itself from the adapter on orientation change</a>. I bet everyone can easily find the problem as well as the answer for it. But let me talk a bit more.</p>
+<p><strong>Check points to ‘The Problem’</strong>:</p>
+<ul>
+<li><p>If you have used RecyclerView quite a while, you may know there are couples of useful callback for Adapter: <code>Adapter#onAttachedToRecyclerView(RecyclerView), Adapter#onDetachedFromRecyclerView(RecyclerView), Adapter#onViewAttachedToWindow(ViewHolder), Adapter#onViewDetachedFromWindow(ViewHolder)</code>.</p>
+</li>
+<li><p>Have you ever debuged to see when they are called? Let me sort them out for you:</p>
+<ul>
+<li><code>onAttachedToRecyclerView</code> is called when the Adapter is set to RecyclerView, after a call to <code>RecyclerView#setAdapter(Adapter)</code> or <code>RecyclerView#swapAdapter(Adapter, boolean)</code>. This is quite obvious.</li>
+<li><code>onDetachedFromRecyclerView</code>, on the other hand, is called when current Adapter if going to be replaced by <strong><em>another Adapter</em></strong> (this another ‘Adapter’ can be Null). What is the point here: <strong>if you don’t replace the Adapter, this method will never be called.</strong> And what happens if an Adapter is never be “detached” from a RecyclerView? Let’s see after I explain about the other couple.</li>
+<li><code>onViewAttachedToWindow</code> is called once RecyclerView or its LayoutManager add a View into RecyclerView (hint: go to <code>RecyclerView</code> source code and search for the following keywords: <a href="https://android.googlesource.com/platform/frameworks/support/+/refs/heads/master/v7/recyclerview/src/android/support/v7/widget/RecyclerView.java#6831" target="_blank" rel="external">dispatchChildAttached</a>).</li>
+<li><code>onViewDetachedFromWindow</code>, on opposite, is called when RecyclerView or its LayoutManager detach a View from current Window.</li>
+</ul>
+</li>
+<li><p>What happens when an <code>Adapter</code> is not <em>detached</em> from a <code>RecyclerView</code>? The couple of attach/detach call to an Adapter is tight to another “couple method” of Adapter: <code>registerAdapterDataObserver/unregisterAdapterDataObserver</code>. In fact, <code>registerAdapterDataObserver</code> is always called with (right before) <code>onAttachedToRecyclerView</code> and <code>unregisterAdapterDataObserver</code> is always called with (right before) <code>onDetachedFromRecyclerView</code>. In depth, <code>Adapter#registerAdapterDataObserver(AdapterDataObserver)</code> will add an instance of <code>AdapterDataObserver</code> to its observer system, to broadcast the changes to <code>RecycleView</code>‘s ecosystem. And <code>unregisterAdapterDataObserver</code> will clean it up. <code>RecyclerView</code> holds an instance of <code>RecyclerViewDataObserver</code> which is a <strong>non-static inner class</strong> that extends AdapterDataObserver (hint: go searching for <code>mObserver</code> in <code>RecyclerView</code> source code). So here you see the problem?</p>
+</li>
+</ul>
+<blockquote>
+<p>→ If <code>onDetachedFromRecyclerView</code> is not called, which is equivalent to the fact that <code>unregisterAdapterDataObserver</code> will not be called, an instance of <code>RecyclerViewDataObserver</code> will stay alive inside your <code>Adapter</code> as long as that <code>Adapter</code> is alive. <code>RecyclerViewDataObserver</code>, in turn, holds a reference to its enclosing <code>RecyclerView</code>, which in turn holds a reference to its enclosing <code>Context</code>. In this case, it is your <code>Activity</code> or <code>Fragment</code>‘s host <code>Context</code> (which is 99% an <code>Activity</code>). So your <code>Activity</code> will be held there for quite a long time, longer than you may expect.</p>
+</blockquote>
+<h1 id="2-The-Solution"><a href="#2-The-Solution" class="headerlink" title="2. The Solution"></a>2. The Solution</h1><p>As we have discussed quite long about the Problem, let’s see how we can solve it. Since the solution is quite obvious, I would like you to not leave here right now and maybe continue reading to the next paragraph: more motivation for you to always use this solution.</p>
+<p>So the solution is:</p>
+<ul>
+<li><p>In short: remove your Adapter from the RecyclerView as soon as your RecyclerView is going to leave. Which is equivalent to calling: <code>recyclerView.setAdapter(null)</code>.</p>
+</li>
+<li><p>Why this solve the problem? - by calling <code>setAdapter</code> with whatever value the Adapter is (as long as it is different to current Adapter), your RecyclerView will always detach current Adapter, which means that <code>Adapter#onDetachedFromRecyclerView</code> and <code>Adapter#unregisterAdapterDataObserver</code> will properly be called. Using a null Adapter will stop the works there. That is!</p>
+</li>
+</ul>
+<h1 id="3-One-more-thing"><a href="#3-One-more-thing" class="headerlink" title="3. One more thing."></a>3. One more thing.</h1><p>You may say <strong><em>well, it is not bad, but I’m not convinced yet…</em></strong>, let’s keep going a bit further.<br>There is another couple I have discussed above: <code>Adapter#onViewAttachedToWindow</code> and <code>Adapter#onViewDetachedFromWindow</code>. Let see 2 (plus 1) screenshots below to see what is the difference between calling <code>setAdapter</code> to null and not calling it.</p>
+<p>Note: my experiment is to setup an Activity with a RecyclerView, and by pressing “current App Stack” button I can easily make the Activity destroy/recreated. I debug on <code>RecyclerView#onChildAttachedToWindow</code> and <code>RecyclerView#onChildDetachedFromWindow</code> which is called along with those 2 methods above, respectively.</p>
+<ul>
+<li>Screenshot 0: after clicking to “App Stack” button, your Activity is destroy, and by clicking to its “Snapshot” in the stack, you bring it to life with a “recreation” (savedInstanceState is not null).</li>
+</ul>
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/activity-recreated.png" alt="Screenshot 0: Activity is re-created" title="Screenshot 0: Activity is re-created">
+<ul>
+<li>Screenshot 1: not calling setAdapter to null in onDestroy</li>
+</ul>
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-do-nothing.png" alt="Screenshot 1: not calling setAdapter to null in onDestroy" title="Screenshot 1: not calling setAdapter to null in onDestroy">
+<ul>
+<li>Screenshot 2: calling setAdapter to null in onDestroy</li>
+</ul>
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-remove-adapter.png" alt="Screenshot 2: calling setAdapter to null in onDestroy" title="Screenshot 2: calling setAdapter to null in onDestroy">
+<p>You see the different? </p>
+<ol>
+<li><p>With proper call to remove the Adapter, current Views on RecyclerView are also properly detached from Window. Otherwise, your Views will not be detached, and I cannot tell where they will be after your Activity is destroyed (or maybe it will not…).</p>
+</li>
+<li><p>If you ignore the fact, let see further: the attached Views after your Activity is recreated are all different (see their hashCode in my Screenshot), which means that those older Views is going somewhere else, without a proper “detaching” from the old Window. Where are they? I have no idea.</p>
+</li>
+<li><p>Well, I maybe a bit OCD, but not seeing any “onDetachedFromRecyclerView” while there is a whole bunch of “onChildAttachedToWindow” make me feel bad. Hope it is not only me out there.</p>
+</li>
+</ol>
+<p>That’s all. Happy Coding!</p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <span>Nam Nguyen</span>
+    </p>
+    <p class="copyright-item">
+      <span>Origin: </span>
+      <a href="https://eneim.github.io">https://eneim.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/">https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/</a>
+    </p>
+
+    <p class="copyright-item license">
+      
+      The contents is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Attribution-NonCommercial 4.0 International License
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      
+        <footer class="post-footer">
+          <div class="post-tags">
+            
+              <a href="/tags/EN/">EN</a>
+            
+              <a href="/tags/Dev/">Dev</a>
+            
+              <a href="/tags/Android/">Android</a>
+            
+              <a href="/tags/RecyclerView/">RecyclerView</a>
+            
+              <a href="/tags/Adapter/">Adapter</a>
+            
+              <a href="/tags/Beginner/">Beginner</a>
+            
+          </div>
+          
+          
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/">
+        <span class="next-text nav-default">The future of Toro in relationship with ExoPlayer</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        </footer>
+      
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:nam@ene.im" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+        
+          <a href="http://stackoverflow.com/users/1553254/nguyễn-hoài-nam" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+        
+      
+    
+      
+        
+          <a href="https://twitter.com/ene__im" class="iconfont icon-twitter" title="twitter"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.linkedin.com/in/eneim" class="iconfont icon-linkedin" title="linkedin"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/eneim" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2016 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Nam Nguyen</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/';
+        this.page.identifier = '2017/06/03/Why-you-should-call-setAdapter-null/';
+        this.page.title = 'Why you should call setAdapter(null)';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//eneim.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.2.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.2.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            Read more..
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.2.x"></script>
+
+  </body>
+</html>

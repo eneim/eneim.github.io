@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eneim.github.io/"/>
-  <updated>2017-05-12T08:34:21.000Z</updated>
+  <updated>2017-06-03T06:44:04.000Z</updated>
   <id>https://eneim.github.io/</id>
   
   <author>
@@ -14,6 +14,93 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Why you should call setAdapter(null)</title>
+    <link href="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/"/>
+    <id>https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/</id>
+    <published>2017-06-03T06:44:04.000Z</published>
+    <updated>2017-06-03T06:44:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>TL;DR</strong>: Always call <code>RecyclerView#setAdapter(null)</code> before your <code>RecyclerView</code> is going away (in <code>onDestroy/onDestroyView/...</code>).</p>
+<h1 id="1-Problem"><a href="#1-Problem" class="headerlink" title="1. Problem"></a>1. Problem</h1><p>In common tutorial of RecyclerView out there, you may see this quite frequently, inside an <code>Activity</code>‘s <code>onCreate</code> or either a <code>Fragment</code>‘s <code>onCreateView</code>.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><div class="line">mAdapter = <span class="keyword">new</span> MyCoolAdapter(); <span class="comment">// here mAdapter is a member of enclosing class.</span></div><div class="line">recyclerView.setAdapter(adapter);</div></pre></td></tr></table></figure>
+<p>It is pretty common step when one initialize his/her screen’s <code>RecyclerView</code>. But I rarely see people telling those “learners” what should them do on the “terminal” point. I mean, does anyone care about tearing down the RecyclerView after all?</p>
+<p>One may ask: what’s wrong with that? Is <code>Activity</code> destroying everything after it is destroyed?</p>
+<p>Well, for your curiosity: <strong>will it be destroyed</strong>?</p>
+<p>Let’s take a quick look at this question on StackOverflow: <a href="https://stackoverflow.com/questions/30132643/recyclerview-doesnt-unregister-itself-from-the-adapter-on-orientation-change" target="_blank" rel="external"><code>RecyclerView</code> doesn’t unregister itself from the adapter on orientation change</a>. I bet everyone can easily find the problem as well as the answer for it. But let me talk a bit more.</p>
+<p><strong>Check points to ‘The Problem’</strong>:</p>
+<ul>
+<li><p>If you have used RecyclerView quite a while, you may know there are couples of useful callback for Adapter: <code>Adapter#onAttachedToRecyclerView(RecyclerView), Adapter#onDetachedFromRecyclerView(RecyclerView), Adapter#onViewAttachedToWindow(ViewHolder), Adapter#onViewDetachedFromWindow(ViewHolder)</code>.</p>
+</li>
+<li><p>Have you ever debuged to see when they are called? Let me sort them out for you:</p>
+<ul>
+<li><code>onAttachedToRecyclerView</code> is called when the Adapter is set to RecyclerView, after a call to <code>RecyclerView#setAdapter(Adapter)</code> or <code>RecyclerView#swapAdapter(Adapter, boolean)</code>. This is quite obvious.</li>
+<li><code>onDetachedFromRecyclerView</code>, on the other hand, is called when current Adapter if going to be replaced by <strong><em>another Adapter</em></strong> (this another ‘Adapter’ can be Null). What is the point here: <strong>if you don’t replace the Adapter, this method will never be called.</strong> And what happens if an Adapter is never be “detached” from a RecyclerView? Let’s see after I explain about the other couple.</li>
+<li><code>onViewAttachedToWindow</code> is called once RecyclerView or its LayoutManager add a View into RecyclerView (hint: go to <code>RecyclerView</code> source code and search for the following keywords: <a href="https://android.googlesource.com/platform/frameworks/support/+/refs/heads/master/v7/recyclerview/src/android/support/v7/widget/RecyclerView.java#6831" target="_blank" rel="external">dispatchChildAttached</a>).</li>
+<li><code>onViewDetachedFromWindow</code>, on opposite, is called when RecyclerView or its LayoutManager detach a View from current Window.</li>
+</ul>
+</li>
+<li><p>What happens when an <code>Adapter</code> is not <em>detached</em> from a <code>RecyclerView</code>? The couple of attach/detach call to an Adapter is tight to another “couple method” of Adapter: <code>registerAdapterDataObserver/unregisterAdapterDataObserver</code>. In fact, <code>registerAdapterDataObserver</code> is always called with (right before) <code>onAttachedToRecyclerView</code> and <code>unregisterAdapterDataObserver</code> is always called with (right before) <code>onDetachedFromRecyclerView</code>. In depth, <code>Adapter#registerAdapterDataObserver(AdapterDataObserver)</code> will add an instance of <code>AdapterDataObserver</code> to its observer system, to broadcast the changes to <code>RecycleView</code>‘s ecosystem. And <code>unregisterAdapterDataObserver</code> will clean it up. <code>RecyclerView</code> holds an instance of <code>RecyclerViewDataObserver</code> which is a <strong>non-static inner class</strong> that extends AdapterDataObserver (hint: go searching for <code>mObserver</code> in <code>RecyclerView</code> source code). So here you see the problem?</p>
+</li>
+</ul>
+<blockquote>
+<p>→ If <code>onDetachedFromRecyclerView</code> is not called, which is equivalent to the fact that <code>unregisterAdapterDataObserver</code> will not be called, an instance of <code>RecyclerViewDataObserver</code> will stay alive inside your <code>Adapter</code> as long as that <code>Adapter</code> is alive. <code>RecyclerViewDataObserver</code>, in turn, holds a reference to its enclosing <code>RecyclerView</code>, which in turn holds a reference to its enclosing <code>Context</code>. In this case, it is your <code>Activity</code> or <code>Fragment</code>‘s host <code>Context</code> (which is 99% an <code>Activity</code>). So your <code>Activity</code> will be held there for quite a long time, longer than you may expect.</p>
+</blockquote>
+<h1 id="2-The-Solution"><a href="#2-The-Solution" class="headerlink" title="2. The Solution"></a>2. The Solution</h1><p>As we have discussed quite long about the Problem, let’s see how we can solve it. Since the solution is quite obvious, I would like you to not leave here right now and maybe continue reading to the next paragraph: more motivation for you to always use this solution.</p>
+<p>So the solution is:</p>
+<ul>
+<li><p>In short: remove your Adapter from the RecyclerView as soon as your RecyclerView is going to leave. Which is equivalent to calling: <code>recyclerView.setAdapter(null)</code>.</p>
+</li>
+<li><p>Why this solve the problem? - by calling <code>setAdapter</code> with whatever value the Adapter is (as long as it is different to current Adapter), your RecyclerView will always detach current Adapter, which means that <code>Adapter#onDetachedFromRecyclerView</code> and <code>Adapter#unregisterAdapterDataObserver</code> will properly be called. Using a null Adapter will stop the works there. That is!</p>
+</li>
+</ul>
+<h1 id="3-One-more-thing"><a href="#3-One-more-thing" class="headerlink" title="3. One more thing."></a>3. One more thing.</h1><p>You may say <strong><em>well, it is not bad, but I’m not convinced yet…</em></strong>, let’s keep going a bit further.<br>There is another couple I have discussed above: <code>Adapter#onViewAttachedToWindow</code> and <code>Adapter#onViewDetachedFromWindow</code>. Let see 2 (plus 1) screenshots below to see what is the difference between calling <code>setAdapter</code> to null and not calling it.</p>
+<p>Note: my experiment is to setup an Activity with a RecyclerView, and by pressing “current App Stack” button I can easily make the Activity destroy/recreated. I debug on <code>RecyclerView#onChildAttachedToWindow</code> and <code>RecyclerView#onChildDetachedFromWindow</code> which is called along with those 2 methods above, respectively.</p>
+<ul>
+<li>Screenshot 0: after clicking to “App Stack” button, your Activity is destroy, and by clicking to its “Snapshot” in the stack, you bring it to life with a “recreation” (savedInstanceState is not null).</li>
+</ul>
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/activity-recreated.png" alt="Screenshot 0: Activity is re-created" title="Screenshot 0: Activity is re-created">
+<ul>
+<li>Screenshot 1: not calling setAdapter to null in onDestroy</li>
+</ul>
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-do-nothing.png" alt="Screenshot 1: not calling setAdapter to null in onDestroy" title="Screenshot 1: not calling setAdapter to null in onDestroy">
+<ul>
+<li>Screenshot 2: calling setAdapter to null in onDestroy</li>
+</ul>
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-remove-adapter.png" alt="Screenshot 2: calling setAdapter to null in onDestroy" title="Screenshot 2: calling setAdapter to null in onDestroy">
+<p>You see the different? </p>
+<ol>
+<li><p>With proper call to remove the Adapter, current Views on RecyclerView are also properly detached from Window. Otherwise, your Views will not be detached, and I cannot tell where they will be after your Activity is destroyed (or maybe it will not…).</p>
+</li>
+<li><p>If you ignore the fact, let see further: the attached Views after your Activity is recreated are all different (see their hashCode in my Screenshot), which means that those older Views is going somewhere else, without a proper “detaching” from the old Window. Where are they? I have no idea.</p>
+</li>
+<li><p>Well, I maybe a bit OCD, but not seeing any “onDetachedFromRecyclerView” while there is a whole bunch of “onChildAttachedToWindow” make me feel bad. Hope it is not only me out there.</p>
+</li>
+</ol>
+<p>That’s all. Happy Coding!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      TL;DR Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...).
+    
+    </summary>
+    
+    
+      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+    
+      <category term="Android" scheme="https://eneim.github.io/tags/Android/"/>
+    
+      <category term="RecyclerView" scheme="https://eneim.github.io/tags/RecyclerView/"/>
+    
+      <category term="Adapter" scheme="https://eneim.github.io/tags/Adapter/"/>
+    
+      <category term="Beginner" scheme="https://eneim.github.io/tags/Beginner/"/>
+    
+  </entry>
   
   <entry>
     <title>The future of Toro in relationship with ExoPlayer</title>
