@@ -1,754 +1,327 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
   <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="the simple, the best">
+  <meta name="keyword" content="eneim">
+  <title>
     
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-  <meta name="description" content="the simple, the best"/>
-
-
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="eneim's log">
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.2.x" />
-
-
-
-<link rel="canonical" href="https://eneim.github.io/"/>
-
-
-<meta name="description" content="the simple, the best">
-<meta property="og:type" content="website">
-<meta property="og:title" content="eneim's log">
-<meta property="og:url" content="https://eneim.github.io/index.html">
-<meta property="og:site_name" content="eneim's log">
-<meta property="og:description" content="the simple, the best">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="eneim's log">
-<meta name="twitter:description" content="the simple, the best">
-
-
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.2.x" />
-
-
-
-  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
-
-
-
-
-
-<script>
-  var CONFIG = {
-    search: true,
-    searchPath: "/search.xml",
-    fancybox: true,
-    toc: true,
-  }
-</script>
-
-
-
-
-  
-
-  <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-72567780-7', 'auto');
-        ga('send', 'pageview');
-  </script>
-
-
-
-    <title> eneim's log </title>
-  </head>
-
-  <body><div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/." class="logo">eneim's log</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
+      eneim&#39;s log
     
-      <a href="/">
-        <li class="mobile-menu-item">
-          
-          
-            Home
-          
-        </li>
-      </a>
-    
-      <a href="/archives/">
-        <li class="mobile-menu-item">
-          
-          
-            Archives
-          
-        </li>
-      </a>
-    
-      <a href="/tags">
-        <li class="mobile-menu-item">
-          
-          
-            Tags
-          
-        </li>
-      </a>
-    
-      <a href="/about">
-        <li class="mobile-menu-item">
-          
-          
-            About
-          
-        </li>
-      </a>
-    
-  </ul>
-</nav>
-
-    <div class="container" id="mobile-panel">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">eneim's log</a>
-  <p style="margin-top: -1.2em; margin-bottom: 0; margin-left: 1.5em;">the simple, the best</p>
-</div>
-
-<nav class="site-navbar">
-  
-    <ul id="menu" class="menu">
+  </title>
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="/js/qrious.js"></script>
+  <script src="/js/gitment.js"></script>
+</head>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>eneim's log</span>
+    </a>
+    <ul class="right-list">
       
-        <li class="menu-item">
-          <a class="menu-item-link" href="/">
-            
-            
-              Home
-            
-          </a>
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
         </li>
       
-        <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
-            
-            
-              Archives
-            
-          </a>
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
         </li>
       
-        <li class="menu-item">
-          <a class="menu-item-link" href="/tags">
-            
-            
-              Tags
-            
-          </a>
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
         </li>
       
-        <li class="menu-item">
-          <a class="menu-item-link" href="/about">
-            
-            
-              About
-            
-          </a>
-        </li>
-      
-      
-        <li class="menu-search">
-          <form>
-            <i class="iconfont icon-search" id="open-search"></i>
-            <input type="text" class="search-input" id="search-input" />
-            <i class="iconfont icon-close" id="close-search"></i>
-          </form>
+        <li class="list-item">
+          
+            <a href="https://github.com/eneim" class="item-link">Github</a>
+          
         </li>
       
     </ul>
-  
-</nav>
-
-      </header>
-
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts">
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/06/03/Why-you-should-call-setAdapter-null/">Why you should call setAdapter(null)</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Jun 3, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>TL;DR Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...).</p>
-          <div class="read-more">
-            <a href="/2017/06/03/Why-you-should-call-setAdapter-null/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/Dev/">Dev</a>
-            
-              <a href="/tags/Android/">Android</a>
-            
-              <a href="/tags/RecyclerView/">RecyclerView</a>
-            
-              <a href="/tags/Adapter/">Adapter</a>
-            
-              <a href="/tags/Beginner/">Beginner</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-          <a class="post-link" href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/">The future of Toro in relationship with ExoPlayer</a>
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
         
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Apr 27, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
         
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
         
-          
+          <li class="menu-item">
+            
+              <a href="https://github.com/eneim" class="menu-link">Github</a>
+            
+          </li>
         
-
-        
-          <p>... I'm not ending my library. But spending time to support all possible Platforms is impossible.</p>
-          <div class="read-more">
-            <a href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
+      </ul>
     </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/Dev/">Dev</a>
-            
-              <a href="/tags/Android/">Android</a>
-            
-              <a href="/tags/Toro/">Toro</a>
-            
-              <a href="/tags/ExoPlayer/">ExoPlayer</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/02/12/Bye-bye-CI/">Bye bye CI</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Feb 12, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>I have been struggling setting up my new Wercker CI (to support private repo) ...</p>
-          <div class="read-more">
-            <a href="/2017/02/12/Bye-bye-CI/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/Dev/">Dev</a>
-            
-              <a href="/tags/CI/">CI</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/02/11/Migrate-to-wercker/">Migrate to wercker</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Feb 11, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>Lately, there are some changes in either my private life as well as my professional activities. I would like to make my writing better, but still try to keep it staying underground before it is the time to publish it. So I decide to move from travis to something allows me to use private github repo. And here wercker comes.</p>
-          <div class="read-more">
-            <a href="/2017/02/11/Migrate-to-wercker/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/Dev/">Dev</a>
-            
-              <a href="/tags/CI/">CI</a>
-            
-              <a href="/tags/Migrate/">Migrate</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2016/08/07/Deploy-from-travis/">Auto deploy from Travis CI</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Aug 7, 2016
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>I added my blog to Travis CI so every time I push something new to *master branch* of my blog repo, it will automatically generate and deploy my blog.</p>
-          <div class="read-more">
-            <a href="/2016/08/07/Deploy-from-travis/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/Blog/">Blog</a>
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/Dev/">Dev</a>
-            
-              <a href="/tags/CI/">CI</a>
-            
-              <a href="/tags/Travis/">Travis</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2016/08/07/To-the-Multilang/">To the Multi lang blog - English, 日本語, Tiếng Việt</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Aug 7, 2016
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>As a foreigner engineer living in Japan, working with multi-platform services and open projects with other engineers all over the World, supporting multi languages is a must-have feature I would like to add to my blog.</p>
-          <div class="read-more">
-            <a href="/2016/08/07/To-the-Multilang/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/Blog/">Blog</a>
-            
-              <a href="/tags/EN/">EN</a>
-            
-              <a href="/tags/JP/">JP</a>
-            
-              <a href="/tags/VI/">VI</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2016/08/06/new-challenge/">A New Challenge</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Aug 6, 2016
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>Hello World one more time.</p>
-          <div class="read-more">
-            <a href="/2016/08/06/new-challenge/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-      
-        <footer class="post-footer">
-          <div class="post-tags">
-            
-              <a href="/tags/Blog/">Blog</a>
-            
-              <a href="/tags/EN/">EN</a>
-            
-          </div>
-        </footer>
-      
-    
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
-    
-  </nav>
-
-
-          </div>
-          
-        </div>  
-      </main>
-
-      <footer id="footer" class="footer">
-
-  <div class="social-links">
-    
-      
-        
-          <a href="mailto:nam@ene.im" class="iconfont icon-email" title="email"></a>
-        
-      
-    
-      
-        
-          <a href="http://stackoverflow.com/users/1553254/nguyễn-hoài-nam" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-        
-      
-    
-      
-        
-          <a href="https://twitter.com/ene__im" class="iconfont icon-twitter" title="twitter"></a>
-        
-      
-    
-      
-    
-      
-        
-          <a href="https://www.linkedin.com/in/eneim" class="iconfont icon-linkedin" title="linkedin"></a>
-        
-      
-    
-      
-    
-      
-        
-          <a href="https://github.com/eneim" class="iconfont icon-github" title="github"></a>
-        
-      
-    
-      
-    
-      
-    
-      
-    
-    
-    
   </div>
+</header>
 
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
-  </span>
+    <main class="app-body">
   
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
-  </span>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/06/03/Why-you-should-call-setAdapter-null/">Why you should call setAdapter(null)</a>
+      </h2>
+      <p class="article-date">2017-06-03</p>
+      
+        
+  <span class="tag-code">Dev</span>
 
-  <span class="copyright-year">
-    
-    &copy; 
-     
-      2016 - 
-    
-    2017
+  <span class="tag-code">EN</span>
 
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Nam Nguyen</span>
-  </span>
-</div>
-      </footer>
+  <span class="tag-code">Android</span>
 
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
+  <span class="tag-code">RecyclerView</span>
+
+  <span class="tag-code">Adapter</span>
+
+  <span class="tag-code">Beginner</span>
+
+      
+      <div class="article-summary">
+        
+          TL;DR: Always call RecyclerView#setAdapter(null) before your RecyclerView is going away (in onDestroy/onDestroyView/...).
+1. ProblemIn common tuto ...
+        
       </div>
-    </div>
-
-    
-
-
-    
-  
-
-
-
-
-
-  
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
-  
-
-  
-    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  
-
-  
-    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  
-
-
-    <script type="text/javascript" src="/js/src/even.js?v=2.2.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.2.x"></script>
-
-    
-  <script type="text/html" id="search-result">
-    <article class="post">
-      <header class="post-header">
-        <h1 class="post-title">
-          <a href="$url$" class="post-link">
-            $title$
-          </a>
-        </h1>
-      </header>
-      <div class="post-content">
-        $content$
-        <div class="read-more">
-          <a href="$url$" class="read-more-link">
-            Read more..
-          </a>
-        </div>
-      </div>
+      <a class="more" href="/2017/06/03/Why-you-should-call-setAdapter-null/">Read more</a>
     </article>
-  </script>
-  <script type="text/html" id="no-search-result">
-    <div class="no-result">
-      <h2>No result found!</h2>
-    </div>
-  </script>
-  <script type="text/javascript" src="/js/src/search.js?v=2.2.x"></script>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/">The future of Toro in relationship with ExoPlayer</a>
+      </h2>
+      <p class="article-date">2017-04-27</p>
+      
+        
+  <span class="tag-code">Dev</span>
 
+  <span class="tag-code">EN</span>
+
+  <span class="tag-code">Android</span>
+
+  <span class="tag-code">Toro</span>
+
+  <span class="tag-code">ExoPlayer</span>
+
+      
+      <div class="article-summary">
+        
+          I have been developed an Android library named Toro. TL;DR it is here.
+About ToroDescription about this library can be found in that github repo.  ...
+        
+      </div>
+      <a class="more" href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/02/12/Bye-bye-CI/">Bye bye CI</a>
+      </h2>
+      <p class="article-date">2017-02-12</p>
+      
+        
+  <span class="tag-code">Dev</span>
+
+  <span class="tag-code">EN</span>
+
+  <span class="tag-code">CI</span>
+
+      
+      <div class="article-summary">
+        
+          Why ?TL,DR:
+
+Why CI?
+
+Publishing made easy.
+
+Why not CI?
+
+CI setting is complicated.
+Long story shortI have been struggling setting up my new Werc ...
+        
+      </div>
+      <a class="more" href="/2017/02/12/Bye-bye-CI/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/02/11/Migrate-to-wercker/">Migrate to wercker</a>
+      </h2>
+      <p class="article-date">2017-02-11</p>
+      
+        
+  <span class="tag-code">Dev</span>
+
+  <span class="tag-code">EN</span>
+
+  <span class="tag-code">CI</span>
+
+  <span class="tag-code">Migrate</span>
+
+      
+      <div class="article-summary">
+        
+          PrefectSo it has been a while I have no activity on my blog. It is of course a predictable behaviour. These days, I still am wandering around, wit ...
+        
+      </div>
+      <a class="more" href="/2017/02/11/Migrate-to-wercker/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/08/07/Deploy-from-travis/">Auto deploy from Travis CI</a>
+      </h2>
+      <p class="article-date">2016-08-07</p>
+      
+        
+  <span class="tag-code">Dev</span>
+
+  <span class="tag-code">EN</span>
+
+  <span class="tag-code">Blog</span>
+
+  <span class="tag-code">CI</span>
+
+  <span class="tag-code">Travis</span>
+
+      
+      <div class="article-summary">
+        
+          TL,DR: I added my blog to Travis CI so every time I push something new to master branch of my blog repo, it will automatically generate and deploy ...
+        
+      </div>
+      <a class="more" href="/2016/08/07/Deploy-from-travis/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/08/07/To-the-Multilang/">To the Multi lang blog - English, 日本語, Tiếng Việt</a>
+      </h2>
+      <p class="article-date">2016-08-07</p>
+      
+        
+  <span class="tag-code">EN</span>
+
+  <span class="tag-code">Blog</span>
+
+  <span class="tag-code">JP</span>
+
+  <span class="tag-code">VI</span>
+
+      
+      <div class="article-summary">
+        
+          A multi languages blogAs a foreigner engineer living in Japan, working with multi-platform services and open projects with other engineers all ove ...
+        
+      </div>
+      <a class="more" href="/2016/08/07/To-the-Multilang/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/08/06/new-challenge/">A New Challenge</a>
+      </h2>
+      <p class="article-date">2016-08-06</p>
+      
+        
+  <span class="tag-code">EN</span>
+
+  <span class="tag-code">Blog</span>
+
+      
+      <div class="article-summary">
+        
+          New ChallengeSo it has been couple days since I moved on. I wanted to have/create my own tech/stuff blog for quite a long time, and in many times  ...
+        
+      </div>
+      <a class="more" href="/2016/08/06/new-challenge/">Read more</a>
+    </article>
+  
+
+  
+</main>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+<script>
+  var hasLine = 'false';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || '';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
   </body>
 </html>
