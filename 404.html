@@ -10,7 +10,7 @@
       eneim&#39;s log
     
   </title>
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
@@ -150,20 +150,20 @@
   })
 </script>
 <script>
-  var hasLine = 'false';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function() {
     $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || '';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
+      // var figure = $(this).parents('figure');
+      // if (hasLine == 'false') {
+      //   figure.find('.gutter').hide();
+      // }
+      // var lang = figure.attr('class').split(' ')[1] || '';
+      // var codeHtml = $(this).html();
+      // var codeTag = document.createElement('code');
+      // codeTag.className = lang;
+      // codeTag.innerHTML = codeHtml;
+      // $(this).attr('class', '').empty().html(codeTag);
+      // figure.attr('data-lang', lang.toUpperCase());
       hljs.highlightBlock(block);
     });
   })

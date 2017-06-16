@@ -10,7 +10,7 @@
       eneim&#39;s log
     
   </title>
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
@@ -87,75 +87,47 @@
 </header>
 
     <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">---</p>
+  <h2>Tag: ExoPlayer</h2>
+  <p class="post-date">1 post(s)</p>
 </div>
-<main class="app-body" id="archives">
+<main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/">The future of Toro in relationship with ExoPlayer</a>
+      </h2>
+      <p class="article-date">2017-04-27</p>
+      
+        
+  <a href="/tags/Dev" class="tag-code">Dev</a>
 
+  <a href="/tags/EN" class="tag-code">EN</a>
 
+  <a href="/tags/Android" class="tag-code">Android</a>
 
-  <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2017/06/03/Why-you-should-call-setAdapter-null/" class="archive-title">Why you should call setAdapter(null)</a>
-        <p class="archive-date">06-03</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/" class="archive-title">The future of Toro in relationship with ExoPlayer</a>
-        <p class="archive-date">04-27</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/02/12/Bye-bye-CI/" class="archive-title">Bye bye CI</a>
-        <p class="archive-date">02-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/02/11/Migrate-to-wercker/" class="archive-title">Migrate to wercker</a>
-        <p class="archive-date">02-11</p>
-      </div>
-    
-  </ul>
-</section>
+  <a href="/tags/Toro" class="tag-code">Toro</a>
 
-  <section class="time-section">
-  <h1 class="section-year">
-    2016
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2016/08/07/Deploy-from-travis/" class="archive-title">Auto deploy from Travis CI</a>
-        <p class="archive-date">08-07</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2016/08/07/To-the-Multilang/" class="archive-title">To the Multi lang blog - English, 日本語, Tiếng Việt</a>
-        <p class="archive-date">08-07</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2016/08/06/new-challenge/" class="archive-title">A New Challenge</a>
-        <p class="archive-date">08-06</p>
-      </div>
-    
-  </ul>
-</section>
+  <a href="/tags/ExoPlayer" class="tag-code">ExoPlayer</a>
 
+      
+      <div class="article-summary">
+        
+          I have been developed an Android library named Toro. TL;DR it is here.
+About ToroDescription about this library can be found in that github repo.  ...
+        
+      </div>
+      <a class="more" href="/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/">Read more</a>
+    </article>
+  
+
+  
 </main>
 
 <script>
   (function () {
-    var url = 'https://eneim.github.io/tags/ExoPlayer/index.html';
+    var url = 'https://eneim.github.io/tags/exoplayer/index.html';
     $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    $('.header').removeClass('fixed-header')
   })();
 </script>
     <div class="scroll-top">
@@ -185,20 +157,20 @@
   })
 </script>
 <script>
-  var hasLine = 'false';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function() {
     $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || '';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
+      // var figure = $(this).parents('figure');
+      // if (hasLine == 'false') {
+      //   figure.find('.gutter').hide();
+      // }
+      // var lang = figure.attr('class').split(' ')[1] || '';
+      // var codeHtml = $(this).html();
+      // var codeTag = document.createElement('code');
+      // codeTag.className = lang;
+      // codeTag.innerHTML = codeHtml;
+      // $(this).attr('class', '').empty().html(codeTag);
+      // figure.attr('data-lang', lang.toUpperCase());
       hljs.highlightBlock(block);
     });
   })

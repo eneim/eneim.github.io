@@ -88,17 +88,17 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="Android" scheme="https://eneim.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
     
-      <category term="RecyclerView" scheme="https://eneim.github.io/tags/RecyclerView/"/>
+      <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
     
-      <category term="Adapter" scheme="https://eneim.github.io/tags/Adapter/"/>
+      <category term="Adapter" scheme="https://eneim.github.io/tags/adapter/"/>
     
-      <category term="Beginner" scheme="https://eneim.github.io/tags/Beginner/"/>
+      <category term="Beginner" scheme="https://eneim.github.io/tags/beginner/"/>
     
   </entry>
   
@@ -128,15 +128,15 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="Android" scheme="https://eneim.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
     
-      <category term="Toro" scheme="https://eneim.github.io/tags/Toro/"/>
+      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
     
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/ExoPlayer/"/>
+      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
     
   </entry>
   
@@ -167,11 +167,11 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
+      <category term="CI" scheme="https://eneim.github.io/tags/ci/"/>
     
   </entry>
   
@@ -196,13 +196,13 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
+      <category term="CI" scheme="https://eneim.github.io/tags/ci/"/>
     
-      <category term="Migrate" scheme="https://eneim.github.io/tags/Migrate/"/>
+      <category term="Migrate" scheme="https://eneim.github.io/tags/migrate/"/>
     
   </entry>
   
@@ -230,15 +230,15 @@
     </summary>
     
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/Dev/"/>
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
+      <category term="Blog" scheme="https://eneim.github.io/tags/blog/"/>
     
-      <category term="CI" scheme="https://eneim.github.io/tags/CI/"/>
+      <category term="CI" scheme="https://eneim.github.io/tags/ci/"/>
     
-      <category term="Travis" scheme="https://eneim.github.io/tags/Travis/"/>
+      <category term="Travis" scheme="https://eneim.github.io/tags/travis/"/>
     
   </entry>
   
@@ -275,13 +275,13 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
+      <category term="Blog" scheme="https://eneim.github.io/tags/blog/"/>
     
-      <category term="JP" scheme="https://eneim.github.io/tags/JP/"/>
+      <category term="JP" scheme="https://eneim.github.io/tags/jp/"/>
     
-      <category term="VI" scheme="https://eneim.github.io/tags/VI/"/>
+      <category term="VI" scheme="https://eneim.github.io/tags/vi/"/>
     
   </entry>
   
@@ -306,9 +306,9 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/EN/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
     
-      <category term="Blog" scheme="https://eneim.github.io/tags/Blog/"/>
+      <category term="Blog" scheme="https://eneim.github.io/tags/blog/"/>
     
   </entry>
   
