@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="the simple, the best">
+  <meta name="keyword" content="eneim">
+  <title>
+    
+      Toro 3.0 alpha 1 was born, from scratch with love | eneim&#39;s log
+    
+  </title>
+  
+    <meta name="google-site-verification" content="Df1Qt2ADt1yncYOOFgSQqKm6MBiEXc2W7D7hr26ErEU" />
+  
+
+
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+</head>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>eneim's log</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="https://github.com/eneim" class="item-link">Github</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="https://github.com/eneim" class="menu-link">Github</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Toro 3.0 alpha 1 was born, from scratch with love</h2>
+  <p class="post-date">2017-06-25</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL,DR:"></a>TL,DR:</h2><blockquote>
+<p>Just in case you are interested in Video playback, especially in RecyclerView, there is something new for you: <a href="https://github.com/eneim/toro/releases/tag/3.0.0-alpha1" target="_blank" rel="external">https://github.com/eneim/toro/releases/tag/3.0.0-alpha1</a></p>
+</blockquote>
+<h4 id="A-demonstration-mimic-Facebook-timeline-and-more"><a href="#A-demonstration-mimic-Facebook-timeline-and-more" class="headerlink" title="A demonstration (mimic Facebook timeline and more)"></a>A demonstration (mimic Facebook timeline and more)</h4><iframe width="480" height="480" src="https://www.youtube.com/embed/rSAGaNM2_t8"></iframe>
+
+<hr>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>After nearly a month of active development, I would like to announce that Toro has a new major update: Toro 3.0 (alpha 1). Toro 3.0 is a complete rewritten version of Toro.</p>
+<h2 id="Update-summary"><a href="#Update-summary" class="headerlink" title="Update summary"></a>Update summary</h2><ul>
+<li>Toro 3.0 removes the use of static setup in Toro 2 (<code>Toro.attach/detach/init/register/unregister</code> …), which was a burden for both maintainer and users. Instead, all the necessary logic is put into Container - an empowered RecyclerView. In fact, in the RecyclerView eco-system (RecyclerView, Adapter, LayoutManager, ViewHolder, …), RecyclerView is the least likely to be customised (comparing to Adapter and LayoutManager). With that, I put my effort to integrate the beauty of Toro 2.x into a single RecyclerView. As a result, user just need to replace their RecyclerView with Container view to have the support from Toro.</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- just this and you have all the support from Toro 3.0 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">im.ene.toro.widget.Container</span></span></div><div class="line">    <span class="attr">android:id</span>=<span class="string">"@+id/recycler_view"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Also, there is no need to implement the MediaPlayerManager which is tight to Adapter in Toro 2. I was struggling with this constraint for a long time after the release, and finally I know it must be removed. In Toro 3, there is no customisable MediaPlayerManager, its logic is instead integrated inside Container.</li>
+</ul>
+<ul>
+<li>What user still need to do, is to implement the Player interface into the ViewHolder. This is a must, since there is no other way the Container could know if it is talking to a Player or not. But instead of dozens of methods in Toro 2.x, the ToroPlayer interface now contains only a few methods which are enough to control the<br>playback, and few more for the callback from the playback update. A simple ViewHolder implementation looks like below</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimelineVideoViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> <span class="keyword">implements</span> <span class="title">ToroPlayer</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="meta">@Nullable</span> SimpleExoPlayerViewHelper helper;</div><div class="line">  <span class="meta">@Nullable</span> <span class="keyword">private</span> Uri mediaUri;</div><div class="line"></div><div class="line">  <span class="meta">@BindView</span>(R.id.fb_video_player) SimpleExoPlayerView playerView;</div><div class="line">  </div><div class="line">  TimelineVideoViewHolder(View itemView) &#123;</div><div class="line">    <span class="keyword">super</span>(itemView);</div><div class="line">    ButterKnife.bind(<span class="keyword">this</span>, itemView);</div><div class="line">    playerView.setVisibility(View.VISIBLE);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">void</span> <span class="title">bind</span><span class="params">(TimelineAdapter adapter, FbItem item, List&lt;Object&gt; payloads)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.bind(adapter, item, payloads);</div><div class="line">    <span class="keyword">if</span> (item != <span class="keyword">null</span> &amp;&amp; item <span class="keyword">instanceof</span> MediaEntity) &#123;</div><div class="line">      MediaUrl url = ((MediaEntity) item).getMediaUrl();</div><div class="line">      mediaUri = url.getUri();</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@NonNull</span> <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> View <span class="title">getPlayerView</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.playerView;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@NonNull</span> <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> PlaybackInfo <span class="title">getCurrentPlaybackInfo</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> helper != <span class="keyword">null</span> ? helper.updatePlaybackInfo() : <span class="keyword">new</span> PlaybackInfo();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initialize</span><span class="params">(@NonNull Container container, @NonNull PlaybackInfo playbackInfo)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (helper == <span class="keyword">null</span>) &#123;</div><div class="line">      helper = <span class="keyword">new</span> SimpleExoPlayerViewHelper(container, <span class="keyword">this</span>, mediaUri);</div><div class="line">    &#125;</div><div class="line">    helper.initialize(playbackInfo);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (helper != <span class="keyword">null</span>) helper.play();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pause</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (helper != <span class="keyword">null</span>) helper.pause();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPlaying</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> helper != <span class="keyword">null</span> &amp;&amp; helper.isPlaying();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">release</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (helper != <span class="keyword">null</span>) &#123;</div><div class="line">      <span class="keyword">try</span> &#123;</div><div class="line">        helper.cancel();</div><div class="line">      &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">      &#125;</div><div class="line">      helper = <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wantsToPlay</span><span class="params">()</span> </span>&#123;</div><div class="line">    ViewParent parent = itemView.getParent();</div><div class="line">    <span class="keyword">float</span> offset = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (parent != <span class="keyword">null</span> &amp;&amp; parent <span class="keyword">instanceof</span> View) &#123;</div><div class="line">      offset = ToroUtil.visibleAreaOffset(playerView, (View) parent);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> offset &gt;= <span class="number">0.85</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPlayerOrder</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> getAdapterPosition();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>This release also open a way for multiple simultaneous playbacks, even though I would not recommend it. Now with a custom <code>PlayerSelector</code>, you can have the behavior like below: different number of Video playback for each row.</li>
+</ul>
+<img src="/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/demo-player-selector.gif" alt="demo-player-selector.gif" title="">
+<ul>
+<li><p>Deep down to the implementation, Toro 3.0 is no longer listen to Playback state. In fact, it was a pain in my ass when I try to follow the state machine of 3 Media player APIs (MediaPlayer, ExoPlayer 1, ExoPlayer 2) to tell Toro instance to deal with a Player when it is ready to play or when it completes the playback. In Toro 3.0, it is now just asking the Player to initialize the resource for playback, and then start it, or pause it, on demand. All the playback state update is ignore by Toro, and users will have the freedom to integrate their own callback logic.</p>
+</li>
+<li><p>This also asks the users more to handle the callback by themselves, which can be hard at first. So I put 2 helpers classes to help them getting start with Toro 3.0 easier. Right now only ExoPlayer 2.+ and Android MediaPlayer are supported. And there will be no plan to support more playback SDKs. But as users will need to implement 3rd party SDK such as Youtube, Vimeo, etc, I’m always try to help as much as possible.</p>
+</li>
+<li><p>More detail about how to use Toro 3.0 alpha 1 can be found in README as well as the sample app. So it is highly recommended to go though the README as well as app module before asking for any implementation details.</p>
+</li>
+<li><p><strong>What happens with Toro 2.x</strong>: I will try to answer as much as possible, and fix fatal issues only. All up coming development will go to 3.+ and so on.</p>
+</li>
+</ul>
+<h2 id="Final-words"><a href="#Final-words" class="headerlink" title="Final words"></a>Final words</h2><p>I would like to write more about this release, as well as what I have learnt about <code>RecyclerView</code> while creating this and more. But for now, I will take a rest and wait for issue report.</p>
+<h2 id="Happy-scrolling"><a href="#Happy-scrolling" class="headerlink" title="Happy scrolling!"></a>Happy scrolling!</h2></section>
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags/Dev" class="tag-code">Dev</a>
+
+  <a href="/tags/EN" class="tag-code">EN</a>
+
+  <a href="/tags/Android" class="tag-code">Android</a>
+
+  <a href="/tags/Toro" class="tag-code">Toro</a>
+
+  <a href="/tags/ExoPlayer" class="tag-code">ExoPlayer</a>
+
+  <a href="/tags/RecyclerView" class="tag-code">RecyclerView</a>
+
+  <a href="/tags/MediaPlayer" class="tag-code">MediaPlayer</a>
+
+      </div>
+    
+    <div id="disqus_thread"></div>
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'https://eneim.github.io/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+
+  var disqus_config = function () {
+        this.page.url = 'https://eneim.github.io/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/';
+        this.page.identifier = '2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/';
+        this.page.title = 'Toro 3.0 alpha 1 was born, from scratch with love';
+  };
+  (function() {
+  var d = document, s = d.createElement('script');
+
+  s.src = '//eneim.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+<script>
+  var hasLine = 'false';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function() {
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || '';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72567780-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="/js/script.js"></script>
+  </body>
+</html>
