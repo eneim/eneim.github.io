@@ -16,6 +16,7 @@
 
 
   <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
@@ -53,6 +54,12 @@
           
         </li>
       
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
     </ul>
     <div class="menu">
       <span class="icon-bar"></span>
@@ -86,6 +93,12 @@
             
           </li>
         
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -110,9 +123,9 @@
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags/Dev" class="tag-code">Dev</a>
-
   <a href="/tags/EN" class="tag-code">EN</a>
+
+  <a href="/tags/Dev" class="tag-code">Dev</a>
 
   <a href="/tags/CI" class="tag-code">CI</a>
 
@@ -130,6 +143,11 @@
     $('#article-banner').geopattern(url);
     $('.header').removeClass('fixed-header');
   })();
+
+  // error image
+  $(".markdown-content img").on('error', function() {
+    $(this).attr('src', 'http://yanm1ng.cn/error-img.png') 
+  })
 
   var disqus_config = function () {
         this.page.url = 'https://eneim.github.io/2017/02/11/Migrate-to-wercker/';
