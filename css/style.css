@@ -280,17 +280,25 @@ h2.article-head {
 .opacity {
   opacity: 1;
 }
+.square-container {
+  width: 100%;
+}
+.square-container > br {
+  display: none;
+}
 .square {
   width: 100%;
-  display: inline-block;
+  margin: 0 auto;
+  max-width: 480px;
   position: relative;
 }
 .square:after {
-  padding-top: 100%;
+  padding-top: 56.25%;
   display: block;
   content: '';
 }
 .square-child {
+  max-width: 480px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -299,13 +307,18 @@ h2.article-head {
 }
 .ene-github-card {
   width: auto;
-  margin: 12px 8px 0px 8px;
+  margin-top: 12px;
 }
 .ene-github-card > br {
   display: none;
 }
-.ene-github-card > div[style] {
-  text-align: start !important;
+.ene-github-card > div[style] iframe {
+  width: 100%;
+  max-width: 480px !important;
+}
+.video-container {
+  max-width: 400px;
+  width: 100%;
 }
 .header {
   background: none;
