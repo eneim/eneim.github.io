@@ -498,6 +498,7 @@ h2.article-head {
 .markdown-content p,
 .article-summary p {
   line-height: 1.6em;
+  margin-top: 12px;
 }
 .markdown-content p code,
 .article-summary p code {
@@ -550,6 +551,10 @@ h2.article-head {
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
 }
+.markdown-content blockquote p,
+.article-summary blockquote p {
+  margin-top: 0px;
+}
 .markdown-content ul,
 .article-summary ul,
 .markdown-content ol,
@@ -563,6 +568,12 @@ h2.article-head {
 .article-summary ol li {
   padding: 5px 0;
   line-height: 1.6em;
+}
+.markdown-content ul li p,
+.article-summary ul li p,
+.markdown-content ol li p,
+.article-summary ol li p {
+  margin-top: 0;
 }
 .markdown-content ul li code,
 .article-summary ul li code,
