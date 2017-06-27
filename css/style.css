@@ -297,6 +297,16 @@ h2.article-head {
   right: 0;
   left: 0;
 }
+.ene-github-card {
+  width: auto;
+  margin: 12px 8px 0px 8px;
+}
+.ene-github-card > br {
+  display: none;
+}
+.ene-github-card > div[style] {
+  text-align: start !important;
+}
 .header {
   background: none;
   border: none;
