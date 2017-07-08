@@ -309,13 +309,6 @@ h2.article-head {
   width: auto;
   margin-top: 12px;
 }
-.ene-github-card > br {
-  display: none;
-}
-.ene-github-card > div[style] iframe {
-  width: 100%;
-  max-width: 480px !important;
-}
 .video-container {
   max-width: 400px;
   width: 100%;
@@ -497,12 +490,17 @@ h2.article-head {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.markdown-content figcaption,
+.article-summary figcaption {
+  margin: 8px;
+}
 .markdown-content pre,
 .article-summary pre,
 .markdown-content code,
 .article-summary code {
   font-family: 'Roboto Mono', Monaco, courier, monospace;
   font-size: 13px;
+  white-space: pre-wrap;
 }
 @media screen and (max-width: 480px) {
   .markdown-content pre,
