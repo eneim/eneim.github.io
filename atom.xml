@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eneim.github.io/"/>
-  <updated>2017-07-08T16:27:27.000Z</updated>
+  <updated>2017-07-08T16:30:40.000Z</updated>
   <id>https://eneim.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://eneim.github.io/2017/07/09/toro-101-how-to-1/"/>
     <id>https://eneim.github.io/2017/07/09/toro-101-how-to-1/</id>
     <published>2017-07-08T15:59:53.000Z</published>
-    <updated>2017-07-08T16:27:27.000Z</updated>
+    <updated>2017-07-08T16:30:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-Intro"><a href="#1-Intro" class="headerlink" title="1. Intro"></a>1. Intro</h2><p>With the effort I put on to rework the <a href="https://github.com/eneim/toro" target="_blank" rel="external">Toro</a> library, I believe that implementing <strong>auto playback playlist</strong> is easier than ever before. But with the lack of documentation skill, I’m afraid a single README or a few sample code cannot tell that to all the people who need it. So I write about it, what it does, how it can help you and how to use it with the least effort.</p>
 <h2 id="2-Our-target"><a href="#2-Our-target" class="headerlink" title="2. Our target"></a>2. Our target</h2><p>This post will show you how to use <strong>Toro v3 (currently beta 1)</strong> to implement a dead simple Video list, that will start and pause the playback automatically. A demo looks like below:</p>
@@ -28,7 +28,7 @@
 <blockquote>
 <p><strong>Question 1</strong>: Why do I even need to do this?</p>
 </blockquote>
-<p><strong>Answer 1</strong>: Only if you want to implementation like Twitter timeline, Facebook feed, or Instagram, where Video starts playback automatically when user see it, and pause it when user scroll over it.</p>
+<p><strong>Answer 1</strong>: Only if you want to implement things like Twitter timeline, Facebook feed, or Instagram, where Video starts playback automatically when user scrolls to it, and pause it when user scrolls it off screen.</p>
 <blockquote>
 <p><strong>Question 2</strong>: This doesn’t look like Facebook. Is it too simple?</p>
 </blockquote>
