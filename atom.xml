@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eneim.github.io/"/>
-  <updated>2017-07-09T02:17:03.000Z</updated>
+  <updated>2017-07-10T00:11:52.000Z</updated>
   <id>https://eneim.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Toro 101 - Create a list of Videos, starts/pauses automatically when scroll</title>
+    <title>Toro 101 - Videos on RecyclerView, starts/pauses automatically when scroll</title>
     <link href="https://eneim.github.io/2017/07/09/toro-101-how-to-1/"/>
     <id>https://eneim.github.io/2017/07/09/toro-101-how-to-1/</id>
     <published>2017-07-08T15:59:53.000Z</published>
-    <updated>2017-07-09T02:17:03.000Z</updated>
+    <updated>2017-07-10T00:11:52.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-Intro"><a href="#1-Intro" class="headerlink" title="1. Intro"></a>1. Intro</h2><p>With the effort I put on to rework the <a href="https://github.com/eneim/toro" target="_blank" rel="external">Toro</a> library, I believe that implementing <strong>auto playback playlist</strong> is easier than ever before. But with the lack of documentation skill, I’m afraid a single README or a few sample code cannot tell that to all the people who need it. So I write about it, what it does, how it can help you and how to use it with the least effort.</p>
 <h2 id="2-Our-target"><a href="#2-Our-target" class="headerlink" title="2. Our target"></a>2. Our target</h2><p>This post will show you how to use <strong>Toro v3 (currently beta 1)</strong> to implement a dead simple Video list, that will start and pause the playback automatically. A demo looks like below:</p>
@@ -76,7 +76,7 @@
 <ul>
 <li>Now try to launch your App and see what happens. If nothing goes wrong, your list now starts the playback automatically and it also correctly switch the Video on your scroll as well.</li>
 </ul>
-<p>All the code above can be found in <a href="https://github.com/eneim/toro/tree/dev-v3/app/src/main/java/im/ene/toro/sample/basic" target="_blank" rel="external">basic demo</a> (this package includes more classes for both <code>ViewPager</code> demo. For now you can safely ignore <code>BasicListFragment</code> class).</p>
+<p>All the code above can be found in <a href="https://github.com/eneim/toro/tree/dev-v3/app/src/main/java/im/ene/toro/sample/basic" target="_blank" rel="external">basic demo</a> (this package includes more classes for <code>ViewPager</code> demo too. For now you can safely ignore <code>BasicListFragment</code> class).</p>
 <h2 id="5-Conclusion-and-future-work"><a href="#5-Conclusion-and-future-work" class="headerlink" title="5. Conclusion and future work"></a>5. Conclusion and future work</h2><p>So here we are. With just a few code, we solve one of the most difficult UX in Android app. And it doesn’t stop right there. In future post, I would like to introduce more complicated implementation using Toro, with ease. All of the code is already available on <a href="https://github.com/eneim/toro/tree/dev-v3/app/src/main/java" target="_blank" rel="external">github/eneim/toro</a>, I will have more or less in-depth discussions as well as my thought about why and how here. </p>
 <p>All feedback are welcome. Happy scrolling!</p>
 ]]></content>
