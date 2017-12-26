@@ -90,13 +90,13 @@
     
       <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
     
-      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
-    
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
-    
       <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
     
       <category term="MediaPlayer" scheme="https://eneim.github.io/tags/mediaplayer/"/>
+    
+      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+    
+      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
     
   </entry>
   
@@ -142,19 +142,19 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
-    
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
-    
       <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
-    
-      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
-    
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
     
       <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
     
       <category term="MediaPlayer" scheme="https://eneim.github.io/tags/mediaplayer/"/>
+    
+      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+    
+      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
+    
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
   </entry>
   
@@ -231,13 +231,13 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
-    
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
-    
       <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
     
       <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
+    
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
       <category term="Adapter" scheme="https://eneim.github.io/tags/adapter/"/>
     
@@ -271,15 +271,15 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
-    
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
-    
       <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
+    
+      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
     
       <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
     
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+    
+      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
     
   </entry>
   

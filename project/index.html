@@ -10,7 +10,7 @@
   
   <title>
     
-      eneim&#39;s log
+      Project | eneim&#39;s log
     
   </title>
   
@@ -117,106 +117,55 @@
 </header>
 
     <div id="article-banner">
-  <h2>Tag: RecyclerView</h2>
-  <p class="post-date">3 post(s)</p>
+  <h2>Projects</h2>
+  <p class="post-date">Github repos</p>
 </div>
-<main class="app-body">
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/07/09/toro-101-how-to-1/">Toro 101 - Videos on RecyclerView, starts/pauses automatically when scroll</a>
-      </h2>
-      <p class="article-date">2017-07-09</p>
-      
-        
-  <a href="/tags/Android" class="tag-code">Android</a>
-
-  <a href="/tags/RecyclerView" class="tag-code">RecyclerView</a>
-
-  <a href="/tags/MediaPlayer" class="tag-code">MediaPlayer</a>
-
-  <a href="/tags/ExoPlayer" class="tag-code">ExoPlayer</a>
-
-  <a href="/tags/Toro" class="tag-code">Toro</a>
-
-      
-      <div class="article-summary">
-        
-          1. IntroWith the effort I put on to rework the Toro library, I believe that implementing auto playback playlist is easier than ever before. But wi ...
-        
-      </div>
-      <a class="more" href="/2017/07/09/toro-101-how-to-1/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/">Toro 3.0 alpha 1 was born, from scratch with love</a>
-      </h2>
-      <p class="article-date">2017-06-25</p>
-      
-        
-  <a href="/tags/Android" class="tag-code">Android</a>
-
-  <a href="/tags/RecyclerView" class="tag-code">RecyclerView</a>
-
-  <a href="/tags/MediaPlayer" class="tag-code">MediaPlayer</a>
-
-  <a href="/tags/ExoPlayer" class="tag-code">ExoPlayer</a>
-
-  <a href="/tags/Toro" class="tag-code">Toro</a>
-
-  <a href="/tags/EN" class="tag-code">EN</a>
-
-  <a href="/tags/Dev" class="tag-code">Dev</a>
-
-      
-      <div class="article-summary">
-        
-          TL,DR:
-Just in case you are interested in Video playback, especially in RecyclerView, there is something new for you: https://github.com/eneim/tor ...
-        
-      </div>
-      <a class="more" href="/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/06/03/Why-you-should-call-setAdapter-null/">(Deprecated) Why you should call setAdapter(null)</a>
-      </h2>
-      <p class="article-date">2017-06-03</p>
-      
-        
-  <a href="/tags/Android" class="tag-code">Android</a>
-
-  <a href="/tags/RecyclerView" class="tag-code">RecyclerView</a>
-
-  <a href="/tags/EN" class="tag-code">EN</a>
-
-  <a href="/tags/Dev" class="tag-code">Dev</a>
-
-  <a href="/tags/Adapter" class="tag-code">Adapter</a>
-
-  <a href="/tags/Beginner" class="tag-code">Beginner</a>
-
-      
-      <div class="article-summary">
-        
-          Notice: If you’ve come here by chance, I want to say thanks for the interest.And also want to have notice: This post is wrongly representing my me ...
-        
-      </div>
-      <a class="more" href="/2017/06/03/Why-you-should-call-setAdapter-null/">Read more</a>
-    </article>
-  
-
-  
+<main class="app-body project-app">
+  <div class="card-container" id="all-project"></div>
 </main>
 
 <script>
-  (function () {
-    var url = 'https://eneim.github.io/tags/recyclerview/index.html';
+  (function() {
+    var url = 'https://eneim.github.io/project/index.html';
     $('#article-banner').geopattern(url);
     $('.header').removeClass('fixed-header')
-  })();
+    $.ajax({
+      headers: {
+        Accept: 'application/vnd.github.v3.raw'
+      },
+      type: 'get',
+      url: 'https://api.github.com/users/eneim/repos?sort=updated',
+      success: function (data) {
+        var repos = data.sort(function(a, b) {
+          return (b.stargazers_count - a.stargazers_count)
+        }).slice(0, 6)
+        var cardHtml = repos.map(function(item) {
+          var description = item.description || ""
+          if (description.replace(/[\u0391-\uFFE5]/g, "aa").length > 72) {
+            description = description.slice(0, 72) + '...'
+          }
+          return (
+            '<section class="project-card">' + 
+              '<a class="card-wrap" href="'+ item.html_url +'" target="_blank">' +
+                '<div class="card-header" data-name="'+ item.name +'"></div>' +
+                '<h3 class="card-title">' + item.name + '</h3>' +
+                '<p class="card-description">' + description + '</p>' +
+                '<div class="card-footer">' +
+                  '<span><i class="fa fa-star"></i>'+ item.stargazers_count +'</span>' +
+                  '<span><i class="fa fa-code-fork"></i>' + item.forks_count +'</span>' +
+                '</div>' +
+              '</a>' +
+            '</section>'
+          )
+        }).join('')
+        $('#all-project').html(cardHtml)
+        $('.card-header').each(function() {
+          var name = $(this).data('name');
+          $(this).geopattern(name);
+        })
+      }
+    });
+  })()
 </script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>

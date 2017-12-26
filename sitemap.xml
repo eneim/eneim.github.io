@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eneim.github.io/tags/index.html</loc>
+    
+    <lastmod>2017-12-26T11:12:49.810Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eneim.github.io/about/index.html</loc>
+    
+    <lastmod>2017-12-26T11:12:36.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eneim.github.io/project/index.html</loc>
+    
+    <lastmod>2017-12-26T10:33:05.975Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eneim.github.io/2017/07/09/toro-101-how-to-1/</loc>
     
     <lastmod>2017-07-10T00:11:52.000Z</lastmod>
@@ -12,13 +33,6 @@
     <loc>https://eneim.github.io/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/</loc>
     
     <lastmod>2017-06-27T08:58:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eneim.github.io/about/index.html</loc>
-    
-    <lastmod>2017-06-25T11:57:07.000Z</lastmod>
     
   </url>
   
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://eneim.github.io/404.html</loc>
-    
-    <lastmod>2017-02-11T04:19:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://eneim.github.io/archives/index.html</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
@@ -86,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://eneim.github.io/tags/index.html</loc>
+    <loc>https://eneim.github.io/404.html</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
