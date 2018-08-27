@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eneim.github.io/2018/08/27/introduction-to-toro-3-6-0-2802/</loc>
+    
+    <lastmod>2018-08-27T14:23:45.611Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eneim.github.io/tags/index.html</loc>
     
     <lastmod>2017-12-26T11:12:49.810Z</lastmod>
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://eneim.github.io/archives/index.html</loc>
+    <loc>https://eneim.github.io/404.html</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://eneim.github.io/404.html</loc>
+    <loc>https://eneim.github.io/archives/index.html</loc>
     
     <lastmod>2017-02-11T04:19:37.000Z</lastmod>
     

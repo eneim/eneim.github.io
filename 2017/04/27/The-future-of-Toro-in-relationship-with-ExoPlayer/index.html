@@ -17,6 +17,7 @@
     <meta name="google-site-verification" content="Df1Qt2ADt1yncYOOFgSQqKm6MBiEXc2W7D7hr26ErEU" />
   
 
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -30,8 +31,11 @@
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
   <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <!-- <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="/js/sequence-diagram-snap-min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -126,13 +130,13 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>I have been developed an Android library named <strong>Toro</strong>. TL;DR it is <a href="https://github.com/eneim/Toro" target="_blank" rel="external">here</a>.</p>
+    <section class="markdown-content"><p>I have been developed an Android library named <strong>Toro</strong>. TL;DR it is <a href="https://github.com/eneim/Toro" target="_blank" rel="noopener">here</a>.</p>
 <h1 id="About-Toro"><a href="#About-Toro" class="headerlink" title="About Toro"></a>About Toro</h1><p>Description about this library can be found in that github repo. But in short, Toro supports the behavior of Media Playlist on RecyclerView, including auto playback and state managing (pause/resume etc). The motivation behind this comes from Facebook timeline, Instagram, etc.</p>
 <h1 id="About-ExoPlayer"><a href="#About-ExoPlayer" class="headerlink" title="About ExoPlayer"></a>About ExoPlayer</h1><p><em>From ExoPlayer’s README</em></p>
 <blockquote>
 <p>ExoPlayer is an application level media player for Android. It provides an alternative to Android’s MediaPlayer API for playing audio and video both locally and over the Internet. ExoPlayer supports features not currently supported by Android’s MediaPlayer API, including DASH and SmoothStreaming adaptive playbacks. Unlike the MediaPlayer API, ExoPlayer is easy to customize and extend, and can be updated through Play Store application updates.</p>
 </blockquote>
-<p>Latest version of Toro are built on top of ExoPlayer 2 (and other Media playback platforms, but ExoPlayer 2 is mostly focused). More about ExoPlayer can be found <a href="https://github.com/google/ExoPlayer" target="_blank" rel="external">here</a> and <a href="https://medium.com/google-exoplayer" target="_blank" rel="external">here</a>.</p>
+<p>Latest version of Toro are built on top of ExoPlayer 2 (and other Media playback platforms, but ExoPlayer 2 is mostly focused). More about ExoPlayer can be found <a href="https://github.com/google/ExoPlayer" target="_blank" rel="noopener">here</a> and <a href="https://medium.com/google-exoplayer" target="_blank" rel="noopener">here</a>.</p>
 <h1 id="What-I’m-talking-about"><a href="#What-I’m-talking-about" class="headerlink" title="What I’m talking about?"></a>What I’m talking about?</h1><p>In development history of Toro, it went from supporting every Media playback platform as possible to focusing on ExoPlayer 2. It provides a common interface for playback, then it provides extensions that implement the interfaces on top of the Media playback platform. Right now you can see those extensions in the github repo. Currently Toro supports Android’s default MediaPlayer APIs, ExoPlayer 1 and ExoPlayer 2.</p>
 <p>Since ExoPlayer 2 is now preferred over ExoPlayer 1, and Android’s MediaPlayer API is hard to use as well as maintain (which is also one of the motivation of ExoPlayer), and I’m the only active contributor of Toro, there is a need to consider the future path of the library.</p>
 <p>In short, I love Media playback, so I’m not ending my library. But spending time to support all possible Platforms is impossible. Instead, I will push my focus to ExoPlayer 2+ from now on (in fact, I will keep support ExoPlayer 2 as long as it is under active development. Even after that, I will keep supporting the latest stable release for a reasonable duration). Furthermore, Toro comes with a pretty well modularization structure, and developing extensions are really straight-forward, I believe that supporting other platform are just the problem of time and human resources. So anyone in favor can take that part and contribute.</p>
@@ -148,9 +152,9 @@
 
   <a href="/tags/Toro" class="tag-code">Toro</a>
 
-  <a href="/tags/EN" class="tag-code">EN</a>
-
   <a href="/tags/Dev" class="tag-code">Dev</a>
+
+  <a href="/tags/EN" class="tag-code">EN</a>
 
       </div>
     
@@ -176,7 +180,7 @@
 <script>
   (function () {
     var url = 'https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/';
-    var banner = 'undefined'
+    var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
@@ -222,18 +226,18 @@
     })
   })();
   
-  var disqus_config = function () {
-      this.page.url = 'https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/';
-      this.page.identifier = '2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/';
-      this.page.title = 'The future of Toro in relationship with ExoPlayer';
-  };
+  // var disqus_config = function () {
+  //     this.page.url = 'https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/';
+  //     this.page.identifier = '2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/';
+  //     this.page.title = 'The future of Toro in relationship with ExoPlayer';
+  // };
 
-  (function() {
-  var d = document, s = d.createElement('script');
-  s.src = '//eneim.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
+  // (function() {
+  // var d = document, s = d.createElement('script');
+  // s.src = '//eneim.disqus.com/embed.js';
+  // s.setAttribute('data-timestamp', +new Date());
+  // (d.head || d.body).appendChild(s);
+  // })();
 
 </script>
 
@@ -242,7 +246,7 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
   </p>

@@ -17,6 +17,7 @@
     <meta name="google-site-verification" content="Df1Qt2ADt1yncYOOFgSQqKm6MBiEXc2W7D7hr26ErEU" />
   
 
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -30,8 +31,11 @@
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
   <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <!-- <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="/js/sequence-diagram-snap-min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -128,11 +132,11 @@
   <article class="post-article">
     <section class="markdown-content"><h2 id="Notice-If-you’ve-come-here-by-chance-I-want-to-say-thanks-for-the-interest"><a href="#Notice-If-you’ve-come-here-by-chance-I-want-to-say-thanks-for-the-interest" class="headerlink" title="Notice: If you’ve come here by chance, I want to say thanks for the interest."></a>Notice: If you’ve come here by chance, I want to say thanks for the interest.</h2><h2 id="And-also-want-to-have-notice-This-post-is-wrongly-representing-my-message-It-I-actually-also-uses-a-bad-example-to-raise-the-Problem-which-cause-a-misleading-discussion"><a href="#And-also-want-to-have-notice-This-post-is-wrongly-representing-my-message-It-I-actually-also-uses-a-bad-example-to-raise-the-Problem-which-cause-a-misleading-discussion" class="headerlink" title="And also want to have notice: This post is wrongly representing my message. It (I actually) also uses a bad example to raise the Problem, which cause a misleading discussion."></a>And also want to have notice: This post is wrongly representing my message. It (I actually) also uses a bad example to raise the Problem, which cause a misleading discussion.</h2><h2 id="At-the-moment-I’m-revising-my-message-as-well-as-updating-this-post-By-the-meantime-this-post-is-no-longer-a-good-place-for-reference-this-is-my-apologize"><a href="#At-the-moment-I’m-revising-my-message-as-well-as-updating-this-post-By-the-meantime-this-post-is-no-longer-a-good-place-for-reference-this-is-my-apologize" class="headerlink" title="At the moment, I’m revising my message as well as updating this post. By the meantime, this post is no longer a good place for reference, this is my apologize."></a>At the moment, I’m revising my message as well as updating this post. By the meantime, this post is no longer a good place for reference, this is my apologize.</h2><p><del><strong>TL;DR</strong>: Always call <code>RecyclerView#setAdapter(null)</code> before your <code>RecyclerView</code> is going away (in <code>onDestroy/onDestroyView/...</code>).</del></p>
 <h1 id="1-Problem"><a href="#1-Problem" class="headerlink" title="1. Problem"></a>1. Problem</h1><p>In common tutorials about RecyclerView out there, you may see this quite frequently, inside an <code>Activity</code>‘s <code>onCreate</code> or a <code>Fragment</code>‘s <code>onCreateView</code>.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><div class="line">mAdapter = <span class="keyword">new</span> MyCoolAdapter(); <span class="comment">// here mAdapter is a member of enclosing class.</span></div><div class="line">recyclerView.setAdapter(adapter);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">mAdapter = <span class="keyword">new</span> MyCoolAdapter(); <span class="comment">// here mAdapter is a member of enclosing class.</span></span><br><span class="line">recyclerView.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
 <p>It is pretty common step when one initialize his/her screen’s <code>RecyclerView</code>. But I rarely see people telling those “learners” what should them do on the “terminal” point. I mean, does anyone care about tearing down the RecyclerView after all?</p>
 <p>One may ask: what’s wrong with that? Is <code>Activity</code> destroying everything after it is destroyed?</p>
 <p>Well, for your curiosity: <strong>Will it be destroyed</strong>?</p>
-<p>Let’s take a quick look at this question on StackOverflow: <a href="https://stackoverflow.com/questions/30132643/recyclerview-doesnt-unregister-itself-from-the-adapter-on-orientation-change" target="_blank" rel="external"><code>RecyclerView</code> doesn’t unregister itself from the adapter on orientation change</a>. I bet everyone can easily find the problem as well as the answer for it. But let me talk a bit more.</p>
+<p>Let’s take a quick look at this question on StackOverflow: <a href="https://stackoverflow.com/questions/30132643/recyclerview-doesnt-unregister-itself-from-the-adapter-on-orientation-change" target="_blank" rel="noopener"><code>RecyclerView</code> doesn’t unregister itself from the adapter on orientation change</a>. I bet everyone can easily find the problem as well as the answer for it. But let me talk a bit more.</p>
 <p><strong>Check points to ‘The Problem’</strong>:</p>
 <ul>
 <li><p>If you have used RecyclerView quite a while, you may know there are couples of useful callback for Adapter: <code>Adapter#onAttachedToRecyclerView(RecyclerView), Adapter#onDetachedFromRecyclerView(RecyclerView), Adapter#onViewAttachedToWindow(ViewHolder), Adapter#onViewDetachedFromWindow(ViewHolder)</code>.</p>
@@ -141,7 +145,7 @@
 <ul>
 <li><code>onAttachedToRecyclerView</code> is called when the Adapter is set to RecyclerView, after a call to <code>RecyclerView#setAdapter(Adapter)</code> or <code>RecyclerView#swapAdapter(Adapter, boolean)</code>. This is quite obvious.</li>
 <li><code>onDetachedFromRecyclerView</code>, on the other hand, is called when current Adapter if going to be replaced by <strong><em>another Adapter</em></strong> (this another ‘Adapter’ can be Null). What is the point here: <strong>if you don’t replace the Adapter, this method will never be called.</strong> And what happens if an Adapter is never be “detached” from a RecyclerView? Let’s see after I explain about the other couples.</li>
-<li><code>onViewAttachedToWindow</code> is called once RecyclerView or its LayoutManager add a View into RecyclerView (hint: go to <code>RecyclerView</code> source code and search for the following keywords: <a href="https://android.googlesource.com/platform/frameworks/support/+/refs/heads/master/v7/recyclerview/src/android/support/v7/widget/RecyclerView.java#6831" target="_blank" rel="external">dispatchChildAttached</a>).</li>
+<li><code>onViewAttachedToWindow</code> is called once RecyclerView or its LayoutManager add a View into RecyclerView (hint: go to <code>RecyclerView</code> source code and search for the following keywords: <a href="https://android.googlesource.com/platform/frameworks/support/+/refs/heads/master/v7/recyclerview/src/android/support/v7/widget/RecyclerView.java#6831" target="_blank" rel="noopener">dispatchChildAttached</a>).</li>
 <li><code>onViewDetachedFromWindow</code>, on opposite, is called when RecyclerView or its LayoutManager detach a View from current Window.</li>
 </ul>
 </li>
@@ -164,15 +168,15 @@
 <ul>
 <li>Screenshot 0: after clicking to “App Stack” button, your Activity is destroyed, and by clicking to its “Snapshot” in the stack, you bring it back to life with a “recreation” (savedInstanceState is not null).</li>
 </ul>
-<img src="/2017/06/03/Why-you-should-call-setAdapter-null/activity-recreated.png" alt="Screenshot 0: Activity is re-created" title="Screenshot 0: Activity is re-created">
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/activity-recreated.png" title="Screenshot 0: Activity is re-created">
 <ul>
 <li>Screenshot 1: not calling setAdapter to null in onDestroy</li>
 </ul>
-<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-do-nothing.png" alt="Screenshot 1: not calling setAdapter to null in onDestroy" title="Screenshot 1: not calling setAdapter to null in onDestroy">
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-do-nothing.png" title="Screenshot 1: not calling setAdapter to null in onDestroy">
 <ul>
 <li>Screenshot 2: calling setAdapter to null in onDestroy</li>
 </ul>
-<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-remove-adapter.png" alt="Screenshot 2: calling setAdapter to null in onDestroy" title="Screenshot 2: calling setAdapter to null in onDestroy">
+<img src="/2017/06/03/Why-you-should-call-setAdapter-null/destroy-remove-adapter.png" title="Screenshot 2: calling setAdapter to null in onDestroy">
 <p>You see the difference? </p>
 <ol>
 <li><p>With proper call to remove the Adapter, current Views on RecyclerView are also properly detached from Window. Otherwise, your Views will not be detached, and I cannot tell where they will be after your Activity is destroyed (or maybe it will not…).</p>
@@ -193,9 +197,9 @@
 
   <a href="/tags/RecyclerView" class="tag-code">RecyclerView</a>
 
-  <a href="/tags/EN" class="tag-code">EN</a>
-
   <a href="/tags/Dev" class="tag-code">Dev</a>
+
+  <a href="/tags/EN" class="tag-code">EN</a>
 
   <a href="/tags/Adapter" class="tag-code">Adapter</a>
 
@@ -225,7 +229,7 @@
 <script>
   (function () {
     var url = 'https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/';
-    var banner = 'undefined'
+    var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
@@ -271,18 +275,18 @@
     })
   })();
   
-  var disqus_config = function () {
-      this.page.url = 'https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/';
-      this.page.identifier = '2017/06/03/Why-you-should-call-setAdapter-null/';
-      this.page.title = '(Deprecated) Why you should call setAdapter(null)';
-  };
+  // var disqus_config = function () {
+  //     this.page.url = 'https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/';
+  //     this.page.identifier = '2017/06/03/Why-you-should-call-setAdapter-null/';
+  //     this.page.title = '(Deprecated) Why you should call setAdapter(null)';
+  // };
 
-  (function() {
-  var d = document, s = d.createElement('script');
-  s.src = '//eneim.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
+  // (function() {
+  // var d = document, s = d.createElement('script');
+  // s.src = '//eneim.disqus.com/embed.js';
+  // s.setAttribute('data-timestamp', +new Date());
+  // (d.head || d.body).appendChild(s);
+  // })();
 
 </script>
 
@@ -291,7 +295,7 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
