@@ -6,7 +6,7 @@
   <meta name="description" content="the simple, the best">
   <meta name="keyword" content="eneim">
   
-    <link rel="shortcut icon" href="/css/images/logo.png">
+    <link rel="shortcut icon" type="image/ico" href="/source/css/logo"/> 
   
   <title>
     
@@ -35,7 +35,34 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="/js/qrious.js"></script>
   <script src="/js/sequence-diagram-snap-min.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
 </head>
   <body>
     <header class="header fixed-header">
@@ -205,7 +232,52 @@
 
       </div>
     
+    <!-- Share START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">Scan the QR code to share this article</p>
+      </div>
+    
+    <!-- Share END -->
+    <!-- Donate START -->
+    
+      <div class="money-like">
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+        <script type='text/javascript'>
+          kofiwidget2.init('Feel good? Buy me a Koffee ^^', '#6e61ab', 'A342OWW');kofiwidget2.draw();
+        </script> 
+      </div>
+    
+    <!-- Donate END -->
     <div id="disqus_thread"></div>
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/">
+        <span class="nav-arrow">← </span>
+        
+          Toro 3.0 alpha 1 was born, from scratch with love
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2018/08/27/introduction-to-toro-3-6-0-2802/">
+        
+          A brief introduction to Toro 3.6.0.2802
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    
+      <!-- No Comment -->
+    
   </article>
   <!-- Article END -->
   <!-- Catalog START -->
@@ -273,19 +345,38 @@
     })
   })();
   
-  var disqus_config = function () {
-      this.page.url = 'https://eneim.github.io/2017/07/09/toro-101-how-to-1/';
-      this.page.identifier = '2017/07/09/toro-101-how-to-1/';
-      this.page.title = 'Toro 101 - Videos on RecyclerView, starts/pauses automatically when scroll';
-  };
+  // qrcode
+  var qr = new QRious({
+    element: document.getElementById('share-qrcode'),
+    value: document.location.href
+  });
 
-  (function() {
-  var d = document, s = d.createElement('script');
-  s.src = '//eneim.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
+  // var disqus_config = function () {
+  //     this.page.url = 'https://eneim.github.io/2017/07/09/toro-101-how-to-1/';
+  //     this.page.identifier = '2017/07/09/toro-101-how-to-1/';
+  //     this.page.title = 'Toro 101 - Videos on RecyclerView, starts/pauses automatically when scroll';
+  // };
+
+  // (function() {
+  // var d = document, s = d.createElement('script');
+  // s.src = '//eneim.disqus.com/embed.js';
+  // s.setAttribute('data-timestamp', +new Date());
+  // (d.head || d.body).appendChild(s);
+  // })();
+</script>
+
+<script>
+  var disqus_shortname = 'eneim';
+  
+  var disqus_url = 'https://eneim.github.io/2017/07/09/toro-101-how-to-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
-
 </script>
 
     <div class="scroll-top">
@@ -320,7 +411,7 @@
   async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function() {
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
+      if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
       var lang = figure.attr('class').split(' ')[1] || 'code';
