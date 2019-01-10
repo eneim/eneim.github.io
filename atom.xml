@@ -5,9 +5,9 @@
   <subtitle>the simple, the best</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://eneim.github.io/"/>
+  <link href="https://ene.im/"/>
   <updated>2019-01-07T11:49:42.378Z</updated>
-  <id>https://eneim.github.io/</id>
+  <id>https://ene.im/</id>
   
   <author>
     <name>Nam Nguyen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>2019 and stuffs</title>
-    <link href="https://eneim.github.io/2019/01/07/2019-and-stuffs/"/>
-    <id>https://eneim.github.io/2019/01/07/2019-and-stuffs/</id>
+    <link href="https://ene.im/2019/01/07/2019-and-stuffs/"/>
+    <id>https://ene.im/2019/01/07/2019-and-stuffs/</id>
     <published>2019-01-07T11:49:42.000Z</published>
     <updated>2019-01-07T11:49:42.378Z</updated>
     
@@ -35,18 +35,18 @@
     </summary>
     
     
-      <category term="2019" scheme="https://eneim.github.io/tags/2019/"/>
+      <category term="2019" scheme="https://ene.im/tags/2019/"/>
     
-      <category term="New" scheme="https://eneim.github.io/tags/new/"/>
+      <category term="New" scheme="https://ene.im/tags/new/"/>
     
-      <category term="Update" scheme="https://eneim.github.io/tags/update/"/>
+      <category term="Update" scheme="https://ene.im/tags/update/"/>
     
   </entry>
   
   <entry>
     <title>A brief introduction to Toro 3.6.0.2802</title>
-    <link href="https://eneim.github.io/2018/08/27/introduction-to-toro-3-6-0-2802/"/>
-    <id>https://eneim.github.io/2018/08/27/introduction-to-toro-3-6-0-2802/</id>
+    <link href="https://ene.im/2018/08/27/introduction-to-toro-3-6-0-2802/"/>
+    <id>https://ene.im/2018/08/27/introduction-to-toro-3-6-0-2802/</id>
     <published>2018-08-27T14:23:45.000Z</published>
     <updated>2019-01-09T00:12:32.980Z</updated>
     
@@ -62,24 +62,24 @@
     </summary>
     
     
-      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
+      <category term="Android" scheme="https://ene.im/tags/android/"/>
     
-      <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
+      <category term="RecyclerView" scheme="https://ene.im/tags/recyclerview/"/>
     
-      <category term="MediaPlayer" scheme="https://eneim.github.io/tags/mediaplayer/"/>
+      <category term="MediaPlayer" scheme="https://ene.im/tags/mediaplayer/"/>
     
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+      <category term="ExoPlayer" scheme="https://ene.im/tags/exoplayer/"/>
     
-      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
+      <category term="Toro" scheme="https://ene.im/tags/toro/"/>
     
-      <category term="Ads" scheme="https://eneim.github.io/tags/ads/"/>
+      <category term="Ads" scheme="https://ene.im/tags/ads/"/>
     
   </entry>
   
   <entry>
     <title>Toro 101 - Videos on RecyclerView, starts/pauses automatically when scroll</title>
-    <link href="https://eneim.github.io/2017/07/09/toro-101-how-to-1/"/>
-    <id>https://eneim.github.io/2017/07/09/toro-101-how-to-1/</id>
+    <link href="https://ene.im/2017/07/09/toro-101-how-to-1/"/>
+    <id>https://ene.im/2017/07/09/toro-101-how-to-1/</id>
     <published>2017-07-08T15:59:53.000Z</published>
     <updated>2019-01-07T07:55:36.383Z</updated>
     
@@ -95,22 +95,22 @@
     </summary>
     
     
-      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
+      <category term="Android" scheme="https://ene.im/tags/android/"/>
     
-      <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
+      <category term="RecyclerView" scheme="https://ene.im/tags/recyclerview/"/>
     
-      <category term="MediaPlayer" scheme="https://eneim.github.io/tags/mediaplayer/"/>
+      <category term="MediaPlayer" scheme="https://ene.im/tags/mediaplayer/"/>
     
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+      <category term="ExoPlayer" scheme="https://ene.im/tags/exoplayer/"/>
     
-      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
+      <category term="Toro" scheme="https://ene.im/tags/toro/"/>
     
   </entry>
   
   <entry>
     <title>Toro 3.0 alpha 1 was born, from scratch with love</title>
-    <link href="https://eneim.github.io/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/"/>
-    <id>https://eneim.github.io/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/</id>
+    <link href="https://ene.im/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/"/>
+    <id>https://ene.im/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/</id>
     <published>2017-06-25T05:45:31.000Z</published>
     <updated>2019-01-09T01:09:37.814Z</updated>
     
@@ -126,26 +126,26 @@
     </summary>
     
     
-      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
+      <category term="Android" scheme="https://ene.im/tags/android/"/>
     
-      <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
+      <category term="RecyclerView" scheme="https://ene.im/tags/recyclerview/"/>
     
-      <category term="MediaPlayer" scheme="https://eneim.github.io/tags/mediaplayer/"/>
+      <category term="MediaPlayer" scheme="https://ene.im/tags/mediaplayer/"/>
     
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+      <category term="ExoPlayer" scheme="https://ene.im/tags/exoplayer/"/>
     
-      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
+      <category term="Toro" scheme="https://ene.im/tags/toro/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
   </entry>
   
   <entry>
     <title>(Deprecated) Why you should call setAdapter(null)</title>
-    <link href="https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/"/>
-    <id>https://eneim.github.io/2017/06/03/Why-you-should-call-setAdapter-null/</id>
+    <link href="https://ene.im/2017/06/03/Why-you-should-call-setAdapter-null/"/>
+    <id>https://ene.im/2017/06/03/Why-you-should-call-setAdapter-null/</id>
     <published>2017-06-03T06:44:04.000Z</published>
     <updated>2017-06-21T01:38:21.000Z</updated>
     
@@ -158,24 +158,24 @@
     </summary>
     
     
-      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
+      <category term="Android" scheme="https://ene.im/tags/android/"/>
     
-      <category term="RecyclerView" scheme="https://eneim.github.io/tags/recyclerview/"/>
+      <category term="RecyclerView" scheme="https://ene.im/tags/recyclerview/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
-      <category term="Adapter" scheme="https://eneim.github.io/tags/adapter/"/>
+      <category term="Adapter" scheme="https://ene.im/tags/adapter/"/>
     
-      <category term="Beginner" scheme="https://eneim.github.io/tags/beginner/"/>
+      <category term="Beginner" scheme="https://ene.im/tags/beginner/"/>
     
   </entry>
   
   <entry>
     <title>The future of Toro in relationship with ExoPlayer</title>
-    <link href="https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/"/>
-    <id>https://eneim.github.io/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</id>
+    <link href="https://ene.im/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/"/>
+    <id>https://ene.im/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</id>
     <published>2017-04-26T23:24:42.000Z</published>
     <updated>2017-05-12T08:34:21.000Z</updated>
     
@@ -188,22 +188,22 @@
     </summary>
     
     
-      <category term="Android" scheme="https://eneim.github.io/tags/android/"/>
+      <category term="Android" scheme="https://ene.im/tags/android/"/>
     
-      <category term="ExoPlayer" scheme="https://eneim.github.io/tags/exoplayer/"/>
+      <category term="ExoPlayer" scheme="https://ene.im/tags/exoplayer/"/>
     
-      <category term="Toro" scheme="https://eneim.github.io/tags/toro/"/>
+      <category term="Toro" scheme="https://ene.im/tags/toro/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
   </entry>
   
   <entry>
     <title>Bye bye CI</title>
-    <link href="https://eneim.github.io/2017/02/12/Bye-bye-CI/"/>
-    <id>https://eneim.github.io/2017/02/12/Bye-bye-CI/</id>
+    <link href="https://ene.im/2017/02/12/Bye-bye-CI/"/>
+    <id>https://ene.im/2017/02/12/Bye-bye-CI/</id>
     <published>2017-02-11T15:57:52.000Z</published>
     <updated>2017-05-12T07:01:28.000Z</updated>
     
@@ -216,18 +216,18 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
-      <category term="CI" scheme="https://eneim.github.io/tags/ci/"/>
+      <category term="CI" scheme="https://ene.im/tags/ci/"/>
     
   </entry>
   
   <entry>
     <title>Migrate to wercker</title>
-    <link href="https://eneim.github.io/2017/02/11/Migrate-to-wercker/"/>
-    <id>https://eneim.github.io/2017/02/11/Migrate-to-wercker/</id>
+    <link href="https://ene.im/2017/02/11/Migrate-to-wercker/"/>
+    <id>https://ene.im/2017/02/11/Migrate-to-wercker/</id>
     <published>2017-02-11T04:12:13.000Z</published>
     <updated>2017-05-12T07:01:37.000Z</updated>
     
@@ -240,20 +240,20 @@
     </summary>
     
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
-      <category term="CI" scheme="https://eneim.github.io/tags/ci/"/>
+      <category term="CI" scheme="https://ene.im/tags/ci/"/>
     
-      <category term="Migrate" scheme="https://eneim.github.io/tags/migrate/"/>
+      <category term="Migrate" scheme="https://ene.im/tags/migrate/"/>
     
   </entry>
   
   <entry>
     <title>Auto deploy from Travis CI</title>
-    <link href="https://eneim.github.io/2016/08/07/Deploy-from-travis/"/>
-    <id>https://eneim.github.io/2016/08/07/Deploy-from-travis/</id>
+    <link href="https://ene.im/2016/08/07/Deploy-from-travis/"/>
+    <id>https://ene.im/2016/08/07/Deploy-from-travis/</id>
     <published>2016-08-07T11:42:46.000Z</published>
     <updated>2017-03-11T16:03:56.000Z</updated>
     
@@ -266,22 +266,22 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://eneim.github.io/tags/blog/"/>
+      <category term="Blog" scheme="https://ene.im/tags/blog/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="Dev" scheme="https://eneim.github.io/tags/dev/"/>
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
-      <category term="CI" scheme="https://eneim.github.io/tags/ci/"/>
+      <category term="CI" scheme="https://ene.im/tags/ci/"/>
     
-      <category term="Travis" scheme="https://eneim.github.io/tags/travis/"/>
+      <category term="Travis" scheme="https://ene.im/tags/travis/"/>
     
   </entry>
   
   <entry>
     <title>To the Multi lang blog - English, 日本語, Tiếng Việt</title>
-    <link href="https://eneim.github.io/2016/08/07/To-the-Multilang/"/>
-    <id>https://eneim.github.io/2016/08/07/To-the-Multilang/</id>
+    <link href="https://ene.im/2016/08/07/To-the-Multilang/"/>
+    <id>https://ene.im/2016/08/07/To-the-Multilang/</id>
     <published>2016-08-07T01:16:07.000Z</published>
     <updated>2017-03-11T16:02:28.000Z</updated>
     
@@ -294,20 +294,20 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://eneim.github.io/tags/blog/"/>
+      <category term="Blog" scheme="https://ene.im/tags/blog/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
-      <category term="JP" scheme="https://eneim.github.io/tags/jp/"/>
+      <category term="JP" scheme="https://ene.im/tags/jp/"/>
     
-      <category term="VI" scheme="https://eneim.github.io/tags/vi/"/>
+      <category term="VI" scheme="https://ene.im/tags/vi/"/>
     
   </entry>
   
   <entry>
     <title>A New Challenge</title>
-    <link href="https://eneim.github.io/2016/08/06/new-challenge/"/>
-    <id>https://eneim.github.io/2016/08/06/new-challenge/</id>
+    <link href="https://ene.im/2016/08/06/new-challenge/"/>
+    <id>https://ene.im/2016/08/06/new-challenge/</id>
     <published>2016-08-05T16:44:24.000Z</published>
     <updated>2017-03-11T16:03:39.000Z</updated>
     
@@ -320,9 +320,9 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://eneim.github.io/tags/blog/"/>
+      <category term="Blog" scheme="https://ene.im/tags/blog/"/>
     
-      <category term="EN" scheme="https://eneim.github.io/tags/en/"/>
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
   </entry>
   
