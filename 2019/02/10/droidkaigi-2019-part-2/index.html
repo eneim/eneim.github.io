@@ -6,7 +6,7 @@
 <meta property="og:site_name" content="eneim's log">
 <meta property="og:description" content="This is the first part in my series about my talk at DroidKaigi 2019. You can find the rest of them below:  Part 1 Part 2 (this post) Part 3 Part 4">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://ene.im/js/lazyload-plugin/loading.svg">
+<meta property="og:image" content="https://ene.im/2019/02/10/droidkaigi-2019-part-2/types_of_single_player.png">
 <meta property="og:image" content="https://ene.im/js/lazyload-plugin/loading.svg">
 <meta property="og:image" content="https://ene.im/js/lazyload-plugin/loading.svg">
 <meta property="og:image" content="https://ene.im/js/lazyload-plugin/loading.svg">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Droidkaigi 2019 (part 2)">
 <meta name="twitter:description" content="This is the first part in my series about my talk at DroidKaigi 2019. You can find the rest of them below:  Part 1 Part 2 (this post) Part 3 Part 4">
-<meta name="twitter:image" content="https://ene.im/js/lazyload-plugin/loading.svg">
+<meta name="twitter:image" content="https://ene.im/2019/02/10/droidkaigi-2019-part-2/types_of_single_player.png">
 <meta name="twitter:creator" content="@ene__im"><title>Droidkaigi 2019 (part 2)</title><link rel="shortcut icon" href="/img/eneim.ico" type="image/x-icon"><link href="/styles/site.css" rel="stylesheet"><link href="/styles/zoom.css" rel="stylesheet"><link href="/styles/youtube.css" rel="stylesheet"></head><body><header class="container" id="header"><div class="header"><div class="header-left"><div class="avatar"><img src="/images/avatar.jpg"></div><div class="author"><div class="author-name"><a href="/">eneim</a></div><div class="about-me">the simple, the best</div></div></div><div class="header-right"><ul class="navigation"><li><a href="/archives">archives</a></li><li><a href="/atom.xml">rss</a></li></ul></div><div class="about-me-mask"><div class="about-me-wrap"><div class="about-me__header"><div class="avatar"><img src="/images/avatar.jpg"></div></div><ul class="socials"><li class="social-item"><span class="label"><img src="/images/socials/github.svg" alt="https://github.com/eneim"></span><a href="https://github.com/eneim" target="_blank" title="https://github.com/eneim">https://github.com/eneim</a></li><li class="social-item"><span class="label"><img src="/images/socials/email.svg" alt="nam@ene.im"></span><span>nam@ene.im</span></li></ul></div></div></div></header><div class="container post"><section class="article"><div class="title">Droidkaigi 2019 (part 2)</div><div class="date"># 2019/02/10</div><div class="content"><meta name="generator" content="Hexo 3.8.0"><p>This is the first part in my series about my talk at <a href="https://droidkaigi.jp/2019/" target="_blank" rel="noopener">DroidKaigi 2019</a>. You can find the rest of them below:</p>
 <ul>
 <li><a href="/2019/02/10/droidkaigi-2019-part-1/">Part 1</a></li>
@@ -38,7 +38,7 @@
 <li>Multi windows state Player</li>
 <li>Landscape Player</li>
 </ul>
-<div class="progress-images" style="width:960px"><div class="progress-images--placeholder" style="padding-bottom: 56.25%;"></div><img src="/js/lazyload-plugin/loading.svg" class="progress-images--original" data-original="/2019/02/10/droidkaigi-2019-part-2/types_of_single_player.png" data-thumb="/images/thumb/0ce90279c0afa1983257aa1f1f83a857.png"></div>
+<img src="/2019/02/10/droidkaigi-2019-part-2/types_of_single_player.png">
 <p>There may be more, for example Picture-In-Picture mode. But implement it is not trivial, I would like to spend other post for it.</p>
 <p>Opening Single Player and back has the following challenges in term of UX:</p>
 <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">- Opening Single Player has many chances for config changes</span><br><span class="line">- Handle config changes manually (= add manifest entry)</span><br><span class="line">  - Pros: no resource reloading, playback continuity done!</span><br><span class="line">  - Cons: no adaptive layout, or manually apply using if/else/while… (not me (>_<))< span><br><span class="line">  - Many config changes patterns = error prone</span><br><span class="line">- Handle config changes automatically (= no manifest entry)</span><br><span class="line">  - Pros: adaptive layout for each config</span><br><span class="line">  - Cons/Unresolved: playback continuity</span><br><!--))<--></span></pre></td></tr></tbody></table></figure>
