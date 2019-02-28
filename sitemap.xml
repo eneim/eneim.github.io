@@ -2,58 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-4/</loc>
+    <loc>https://ene.im/2016/08/06/new-challenge/</loc>
     
-    <lastmod>2019-02-11T00:05:12.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-3/</loc>
-    
-    <lastmod>2019-02-10T14:51:49.474Z</lastmod>
+    <lastmod>2019-02-28T12:09:20.176Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-2/</loc>
+    <loc>https://ene.im/2016/08/07/Deploy-from-travis/</loc>
     
-    <lastmod>2019-02-10T14:51:34.657Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-1/</loc>
-    
-    <lastmod>2019-02-10T14:51:00.393Z</lastmod>
+    <lastmod>2019-02-28T12:09:16.395Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ene.im/2019/01/07/2019-and-stuffs/</loc>
+    <loc>https://ene.im/2016/08/07/To-the-Multilang/</loc>
     
-    <lastmod>2019-01-10T06:40:10.347Z</lastmod>
+    <lastmod>2019-02-28T12:09:10.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2017/02/11/Migrate-to-wercker/</loc>
+    
+    <lastmod>2019-02-28T12:09:04.242Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</loc>
+    
+    <lastmod>2019-02-28T12:08:40.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2017/06/03/Why-you-should-call-setAdapter-null/</loc>
+    
+    <lastmod>2019-02-28T12:08:32.994Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://ene.im/2017/06/25/toro-3-0-alpha-1-was-born-from-scratch-with-love/</loc>
     
-    <lastmod>2019-01-09T01:09:37.814Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2018/08/27/introduction-to-toro-3-6-0-2802/</loc>
-    
-    <lastmod>2019-01-09T00:12:32.980Z</lastmod>
+    <lastmod>2019-02-28T11:48:15.376Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://ene.im/2017/07/09/toro-101-how-to-1/</loc>
     
-    <lastmod>2019-01-07T07:55:36.383Z</lastmod>
+    <lastmod>2019-02-28T11:48:07.659Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2018/08/27/introduction-to-toro-3-6-0-2802/</loc>
+    
+    <lastmod>2019-02-28T11:47:52.359Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2019/01/07/2019-and-stuffs/</loc>
+    
+    <lastmod>2019-02-28T11:47:40.197Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-4/</loc>
+    
+    <lastmod>2019-02-28T08:12:52.490Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-1/</loc>
+    
+    <lastmod>2019-02-28T03:53:02.581Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-2/</loc>
+    
+    <lastmod>2019-02-28T03:52:55.607Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ene.im/2019/02/10/droidkaigi-2019-part-3/</loc>
+    
+    <lastmod>2019-02-28T03:52:50.947Z</lastmod>
     
   </url>
   
@@ -79,51 +121,9 @@
   </url>
   
   <url>
-    <loc>https://ene.im/2017/06/03/Why-you-should-call-setAdapter-null/</loc>
-    
-    <lastmod>2017-06-21T01:38:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2017/04/27/The-future-of-Toro-in-relationship-with-ExoPlayer/</loc>
-    
-    <lastmod>2017-05-12T08:34:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2017/02/11/Migrate-to-wercker/</loc>
-    
-    <lastmod>2017-05-12T07:01:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ene.im/2017/02/12/Bye-bye-CI/</loc>
     
     <lastmod>2017-05-12T07:01:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2016/08/07/Deploy-from-travis/</loc>
-    
-    <lastmod>2017-03-11T16:03:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2016/08/06/new-challenge/</loc>
-    
-    <lastmod>2017-03-11T16:03:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ene.im/2016/08/07/To-the-Multilang/</loc>
-    
-    <lastmod>2017-03-11T16:02:28.000Z</lastmod>
     
   </url>
   

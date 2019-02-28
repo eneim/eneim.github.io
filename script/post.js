@@ -1,0 +1,1 @@
+!function(d){var e=jQuery("#header");window.innerWidth<480&&!e.hasClass("slide-hide")&&e.addClass("slide-hide")}();
