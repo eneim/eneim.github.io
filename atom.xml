@@ -274,9 +274,9 @@
     
       <category term="Toro" scheme="https://ene.im/tags/toro/"/>
     
-      <category term="EN" scheme="https://ene.im/tags/en/"/>
-    
       <category term="Dev" scheme="https://ene.im/tags/dev/"/>
+    
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
   </entry>
   
@@ -300,9 +300,9 @@
     
       <category term="RecyclerView" scheme="https://ene.im/tags/recyclerview/"/>
     
-      <category term="EN" scheme="https://ene.im/tags/en/"/>
-    
       <category term="Dev" scheme="https://ene.im/tags/dev/"/>
+    
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
       <category term="Adapter" scheme="https://ene.im/tags/adapter/"/>
     
@@ -332,9 +332,9 @@
     
       <category term="Toro" scheme="https://ene.im/tags/toro/"/>
     
-      <category term="EN" scheme="https://ene.im/tags/en/"/>
-    
       <category term="Dev" scheme="https://ene.im/tags/dev/"/>
+    
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
   </entry>
   
@@ -354,9 +354,9 @@
     </summary>
     
     
-      <category term="EN" scheme="https://ene.im/tags/en/"/>
-    
       <category term="Dev" scheme="https://ene.im/tags/dev/"/>
+    
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
       <category term="CI" scheme="https://ene.im/tags/ci/"/>
     
@@ -378,9 +378,9 @@
     </summary>
     
     
-      <category term="EN" scheme="https://ene.im/tags/en/"/>
-    
       <category term="Dev" scheme="https://ene.im/tags/dev/"/>
+    
+      <category term="EN" scheme="https://ene.im/tags/en/"/>
     
       <category term="CI" scheme="https://ene.im/tags/ci/"/>
     
@@ -404,11 +404,11 @@
     </summary>
     
     
+      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
+    
       <category term="Blog" scheme="https://ene.im/tags/blog/"/>
     
       <category term="EN" scheme="https://ene.im/tags/en/"/>
-    
-      <category term="Dev" scheme="https://ene.im/tags/dev/"/>
     
       <category term="CI" scheme="https://ene.im/tags/ci/"/>
     
